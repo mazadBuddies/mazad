@@ -8,7 +8,7 @@
 
         <div class="myCon">
             <h2 class="title"><i class="fa fa-bullseye"></i>Add New Session</h2>
-                <form action="/mazad/class/session.class.php"; class="signUp" method="post" autocomplete="off" enctype="multipart/form-data" id="mkSession" data-action="ADD" data-accept="11">
+                <form action="/mazad/class/session.class.php" class="signUp ajax_file submit" data-method="post" autocomplete="off" enctype="multipart/form-data" id="mkSession" data-action="ADD" data-accept="11" data-url="/mazad/class/session.class.php">
                     <div class="row">
                         <div class="firstName col-6">
                             <label for="sessionName" class="col-12">Session Name</label>
@@ -127,7 +127,7 @@
                             <div class="border">
                                 <input type="file" class="col-12" name="images"  placeholder="eg. mr.robot" id="images"/>
                             </div>
-                        </div>    
+                        </div>
                     </div>
 
                     <div class="row">

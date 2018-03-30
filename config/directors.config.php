@@ -23,7 +23,7 @@ test test test
 $mashKind = "linux";// linux
 ini_set('display_errors', 1);//this for show errs
 error_reporting(~0);// the same target
-$dirAsString="";
+$dirAsString = "";
 $sep = ($mashKind == "windows")?'\\':'/';
 $dataBasePassword = ($mashKind == "windows")?"":"1234A";
 define("SEP", $sep); // to set our separator

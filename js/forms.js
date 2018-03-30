@@ -175,30 +175,49 @@ function makeInsertArray(array, dataForm){
     for(var i=0;i<array.length;i++){
         dataForm.append(array[i].name, array[i].value);
     }
-    console.debug(dataForm);
+    //console.debug(dataForm);
     return dataForm;
 }
 
-$("form#mkSession").on("submit", function(e){
+function ajaxFileSubmit(e){
     "use strict";
     e.preventDefault();
-    var url = $(this).attr("action");
+    var url = $(this).data("url");
     var formData = $(this).serializeArray();
+    var method   = $(this).data('method');
+    var accept   = String($(this).data('accept'));
+    console.log(sucFunc);
     formData = makeInsertArray(formData, new FormData());
     formData.append("ACTION", $(this).data('action'));
-    uploadeFile("images", "images", url, formData, function(data){
-        (data == '11')
+    uploadeFile("images", "images", url, formData, function (data){
+        console.log(data);
+        if(data == accept)//here
         {
             $("form#mkSession").fadeOut(500, function(){
                 $(".overlay").fadeOut(500, function(){
                     $(".noti-suc").children("span").text("SESSION ADDED SUCCESSFULLY");
                     $(".noti-suc").animate({right:"0%"}, 1000, function(){
-                        $(this).animate({right:"0%"}, 1000, function(){
+                        $(this).animate({right:"0%"}, 2000, function(){
                             $(this).animate({right:"-100%"}, 1000);
-                        });
-                    });
-                });
-            });
-        }
-    });
-});
+                        });// end of small animate
+                    });// end of big animate
+                });// end of small fadeOut
+            });// end of big fadeOut
+        }// end of ig
+    });// end of accept action function
+}// end of function
+
+//$("form#mkSession").on("submit", ajaxFileSubmit);
+//$(".ajax ").on("submit", ajaxSubmit);
+$(".ajax_file.submit").on("submit", ajaxFileSubmit);
+
+
+function printLogo(){
+    "use strict"
+    console.log("*      * **** ****** **** * *             \n");
+    console.log("* *  * * *  *     *  *  * *  *   \n");
+    console.log("*  *   * ****    *   **** *    *    \n");
+    console.log("*      * *  *   *    *  * *   *     \n");
+    console.log("*      * *  * ****** *  * * *        \n");
+}
+printLogo();
