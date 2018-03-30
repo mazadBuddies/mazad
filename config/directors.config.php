@@ -16,6 +16,7 @@ git merge master
 git push --set-upstream origin feature1
 git pull
 test
+test test test
 */
 
 
