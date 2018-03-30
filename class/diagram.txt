@@ -1,0 +1,162 @@
+user class
+------------
+int rate
+
+void lsData()
+booleanlogIn(string email, string password)
+void setData()
+void logOut()
+user getUserById(int id)
+array getAllusers()
+void deactivateUser(int id)
+void activateUser(int id)
+array getDeactivatedUsers()
+void editProfile(all data)
+void makeOffline()
+void makeOnline()
+void dontShow()
+string getMyRank()
+int getMyRate()
+void decreaseRate(int rate)
+void increaseRate(int rate)
+
+followClass
+------------
+int id
+int fromId
+int toId
+
+void removeFollow(int id)
+array getFollowers()
+array getFollowing()
+void followUser(int id)
+
+
+catiegorie
+-----------
+int id
+string catName
+string icon
+string details
+
+void __construct(all data)
+void addCatiegorie(all data)
+void removeCatiegorie(int id)
+array getCatiegorieById(int id)
+array getAllCatiegorie()
+void editCatiegorie(all data)
+
+
+session
+-------
+int id
+string sessionName
+date stratTime
+date endTime
+boolean blind
+int itemId
+int autoSell
+boolean isPrivate
+string sessionPassword
+int maxOffer
+int catId
+boolean finished
+int ownerId
+
+int getNumOfRegestiered(int sessionId)
+void editSession(all data)
+void removeSession(int sessionId)
+array getSessionById(int id)
+array getAllsession()
+void addNewSession(all data)
+
+
+product
+-----
+int id
+int productName
+string tags
+int sessionId
+string imagePath
+int stars
+
+void addProduct(all data)
+void editProduct(all data)
+array getProductById(int id)
+array getAllProduct()
+void setRateForProduct(int stars)
+
+feedback
+--------
+int id
+int fromId
+int aboutId
+string details
+int starts
+
+void mkFeedback(all data)
+void getMyfeedbacks(int userId)
+
+
+notification
+------------
+int id
+int toId
+int kind
+int fromId
+time notificationTime
+string targetLink
+boolean seen
+
+void mkNotification(all data)
+array getMyNotification(int id)
+void makeNotification(int id)
+
+
+report
+------
+int id
+int aboutId
+int fromId
+string details
+int sessionId
+boolean respond
+
+void mkReport(all data)
+void respondToReport(boolean id)
+
+
+autoLoader
+----------
+void my_autoloader
+auto spl_autoload_register(function my_autoloader)
+
+
+fileUploader
+------------
+string targetDir
+string targetFile
+string fileType
+string nameOfPost
+array  ERRORS
+string uploadOk
+array allMIME
+int maxSize
+
+void __construct(string tDir, string nameOfPost,int limitSize, array allTypes)
+void upload()
+void checkMaxSize()
+void fileIsExist()
+void fileMime()
+void isImage()
+array getErrors()
+
+validation
+-----------
+boolean isText(string txt)
+boolean isEmail(string email)
+boolean isNum(int num)
+string validText(string txt)
+string validEmail(string email)
+string validNum(int num)
+string encPassword(string pass)

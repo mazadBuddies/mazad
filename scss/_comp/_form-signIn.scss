@@ -1,0 +1,31 @@
+/*start of sign up style*/
+body{
+    margin-top: 0px!important;
+}
+
+section.body{
+    background-image: url('../../imgs/login.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 20vh;
+}
+div.login{
+    input[type = 'submit']{
+        margin: 30px auto !important;
+    }
+    form{
+        padding-bottom: 10px;
+    }
+    span.dir-signUp{
+        display: block;
+        text-align: center;
+        color: $font-color-w;
+        >a{
+            color: $font-color-w;
+            font-weight: bold;
+            font-size: $font-md + 2px;
+        }
+    }
+}

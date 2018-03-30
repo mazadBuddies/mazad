@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ClassDiagram">
+  <ClassDiagramComponents>
+    <Class name="dataBase" package="" visibility="public" xPosition="-338.0" yPosition="272.0">
+      <Fields>
+        <Field name="dsn" type="string" visibility="private"/>
+        <Field name="dataBaseName" type="string" visibility="private"/>
+        <Field name="user" type="string" visibility="private"/>
+        <Field name="pass" type="string" visibility="private"/>
+        <Field name="option" type="array" visibility="private"/>
+        <Field name="con" type="connection" visibility="private"/>
+        <Field name="curQuery" type="string" visibility="private"/>
+        <Field name="curTable" type="string" visibility="private"/>
+        <Field name="tables" type="array" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="__construct" returnType="array" visibility="public">
+          <Argument type="string" name="serverName"/>
+          <Argument type="string" name="user"/>
+          <Argument type="string" name="pass"/>
+          <Argument type="array" name="option"/>
+        </Method>
+        <Method name="refreashTables" returnType="void" visibility="public"/>
+        <Method name="select" returnType="bool" visibility="public">
+          <Argument type="string" name="select"/>
+          <Argument type="array" name="whereIn"/>
+          <Argument type="array" name="whereEq"/>
+          <Argument type="bool" name="get"/>
+        </Method>
+        <Method name="executeQuery" returnType="array" visibility="public">
+          <Argument type="bool" name="getCount"/>
+          <Argument type="bool" name="get"/>
+          <Argument type="array" name="data"/>
+        </Method>
+        <Method name="getCount" returnType="int" visibility="public"/>
+        <Method name="delete" returnType="array" visibility="public">
+          <Argument type="array" name="whereIn"/>
+          <Argument type="array" name="whereEq"/>
+        </Method>
+        <Method name="update" returnType="array" visibility="public">
+          <Argument type="array" name="setIn"/>
+          <Argument type="array" name="setEq"/>
+          <Argument type="array" name="whereIn"/>
+          <Argument type="array" name="whereEq"/>
+        </Method>
+        <Method name="whereFormat" returnType="string" visibility="public">
+          <Argument type="array" name="whereArr"/>
+          <Argument type="string" name="seb"/>
+        </Method>
+        <Method name="innerJoin" returnType="string" visibility="public">
+          <Argument type="string" name="select"/>
+          <Argument type="string" name="colName"/>
+          <Argument type="string" name="secTableName"/>
+          <Argument type="string" name="secColName"/>
+        </Method>
+        <Method name="setTable" returnType="string" visibility="public">
+          <Argument type="string" name="tableName"/>
+        </Method>
+        <Method name="toString" returnType="array" visibility="public">
+          <Argument type="array" name="array"/>
+        </Method>
+        <Method name="getTableName" returnType="string" visibility="public"/>
+        <Method name="sql" returnType="string" visibility="public">
+          <Argument type="string" name="qur"/>
+        </Method>
+        <Method name="insert" returnType="array" visibility="public">
+          <Argument type="array" name="cols"/>
+          <Argument type="array" name="vals"/>
+        </Method>
+        <Method name="mkInsertArray" returnType="array" visibility="public">
+          <Argument type="array" name="arrCols"/>
+          <Argument type="array" name="arrVals"/>
+          <Argument type="array" name="tragS"/>
+        </Method>
+        <Method name="insertFormat" returnType="bool" visibility="public">
+          <Argument type="array" name="array"/>
+          <Argument type="bool" name="brac"/>
+        </Method>
+        <Method name="setSqlQur" returnType="string" visibility="public">
+          <Argument type="string" name="myQur"/>
+        </Method>
+        <Method name="mk" returnType="void" visibility="public"/>
+        <Method name="edit" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="user" package="" visibility="public" xPosition="245.0" yPosition="261.0">
+      <Fields>
+        <Field name="firstName" type="string" visibility="private"/>
+        <Field name="lastName" type="string" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+        <Field name="gender" type="string" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="role" type="int" visibility="private"/>
+        <Field name="email" type="string" visibility="private"/>
+        <Field name="userPassword" type="string" visibility="private"/>
+        <Field name="userName" type="string" visibility="private"/>
+        <Field name="imagePath" type="string" visibility="private"/>
+        <Field name="following" type="string" visibility="private"/>
+        <Field name="followers" type="string" visibility="private"/>
+        <Field name="birthDate" type="date" visibility="private"/>
+        <Field name="biddings" type="string" visibility="private"/>
+        <Field name="createdSessions" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="__construct" returnType="void" visibility="public">
+          <Argument type="string" name="email"/>
+          <Argument type="string" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,1196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2018, 9:00:21 PM
+    Author     : boodey
+*/
+/*$main-color: rgb(4, 5, 70);
+$sec-color : #fff;
+$def:#fff;
+$font-color : #000;*/
+/*start of heading color*/
+/*end of heading color*/
+/*start of global colors*/
+/*end of global colors*/
+/*start of font size*/
+/*end of font size*/
+/*
+rgb(4, 5, 70)
+rgb(150,10,30)
+*/
+/*
+$main-color: #270226;
+$sec-color : #343042;
+$third-color : #FEFDFE;
+$background-color:#2F353B;
+$input-color:#3D424B;
+$icon-color:#5F6366;
+$icon-background:#393D43;
+$main : #F70083;
+ 
+*/
+a {
+  color: #ff2323; }
+  a:hover {
+    color: #ff2323;
+    text-decoration: none; }
+
+@font-face {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Krona One"), local("KronaOne-Regular"), url(../fonts/jAnEgHdjHcjgfIb1ZcUyOIWg7cU.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Krona One"), local("KronaOne-Regular"), url(../fonts/jAnEgHdjHcjgfIb1ZcUyNoWg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin */
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Abel Regular"), local("Abel-Regular"), url(../fonts/MwQ5bhbm2POE2V9BPQ.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+div.form {
+  border-radius: 0px 0px 7px 7px;
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 100px; }
+  div.form div.myCon {
+    width: 90%;
+    margin: auto; }
+  div.form textarea {
+    background-color: #fff;
+    border: 0px;
+    color: #000; }
+  div.form h2 {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+    padding: 18px 0px; }
+  div.form label {
+    color: #ff2323;
+    font-size: 16px;
+    margin-left: -15px; }
+  div.form input {
+    background-color: #fff;
+    border: 0px;
+    padding: 7px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 18px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    position: relative; }
+    div.form input:focus {
+      background: #fff;
+      transition: all 0.2s ease-in-out; }
+  div.form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #ff2323;
+    border: 2px solid transparent;
+    color: #fff;
+    transition: all 0.2s ease-in-out; }
+    div.form input[type="submit"]:hover {
+      transition: all 0.2s ease-in-out;
+      background-color: transparent;
+      border: 2px solid #ff2323;
+      color: #ff2323; }
+  div.form p {
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-bottom: 18px; }
+  div.form p.gen {
+    color: #ff2323; }
+  div.form div.border {
+    position: relative;
+    height: 45%; }
+    div.form div.border > div.bor {
+      position: absolute;
+      content: ' ';
+      width: 0%;
+      height: 2px;
+      bottom: 0px;
+      left: 50%;
+      background-color: #ff2323; }
+    div.form div.border > i.fa.show {
+      position: absolute;
+      top: 8px;
+      right: 10px; }
+
+/*start of sign up style*/
+div.login {
+  margin: auto; }
+  div.login input[type='submit'] {
+    margin: 30px auto !important; }
+  div.login form {
+    padding-bottom: 10px; }
+  div.login span.dir-signUp {
+    display: block;
+    text-align: center;
+    color: #fff; }
+    div.login span.dir-signUp > a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px; }
+
+/*start of aside style*/
+aside.left-side {
+  background-color: #282828;
+  color: #fff;
+  z-index: 1000;
+  position: fixed;
+  bottom: 0px;
+  font-size: 18px;
+  width: 60px;
+  box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  overflow-x: hidden;
+  transition: all 0.2s ease-in-out; }
+  aside.left-side:hover {
+    width: 250px;
+    transition: all 0.3s ease-in-out; }
+  aside.left-side ul {
+    margin-top: 40px; }
+  aside.left-side li, aside.left-side div.chng {
+    margin: 8px 0px;
+    width: 600px;
+    padding: 4px 0px 10px 18px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease-in-out; }
+    aside.left-side li a, aside.left-side div.chng a {
+      color: #fff; }
+    aside.left-side li:hover, aside.left-side li:hover a, aside.left-side div.chng:hover, aside.left-side div.chng:hover a {
+      color: #000;
+      transition: all 0.2s ease-in-out; }
+    aside.left-side li > i, aside.left-side li div.chng, aside.left-side div.chng > i, aside.left-side div.chng div.chng {
+      padding-right: 20px; }
+  aside.left-side li.active {
+    border-left: 4px solid #ff2323;
+    color: #ff2323; }
+
+/*end of aside style*/
+/*start of nav style*/
+nav.nav-bar {
+  box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  -webkit-box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  -moz-box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  -ms-box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  -o-box-shadow: 2px 2px 2px rgba(11, 11, 11, 0.9);
+  width: 100vw;
+  font-family: "Abel", sans-serif;
+  background-color: #282828;
+  padding-top: 8px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  color: #fff; }
+  nav.nav-bar i.fa.ll {
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: -30px; }
+    nav.nav-bar i.fa.ll:hover {
+      color: #ff2323;
+      transition: all 0.2s ease-in-out; }
+  nav.nav-bar div.name {
+    font-size: 24px;
+    padding: 0px 15px 0px 10px;
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%; }
+  nav.nav-bar span.name {
+    font-size: 34px;
+    text-transform: capitalize;
+    font-family: "Krona One", sans-serif;
+    font-weight: bolder; }
+    nav.nav-bar span.name span.fir {
+      color: #ff2323; }
+    nav.nav-bar span.name span.sec {
+      color: #fff; }
+  nav.nav-bar a {
+    color: #ff2323;
+    font-size: 34px; }
+  nav.nav-bar span.bold {
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px; }
+  nav.nav-bar span.balance {
+    color: #fff;
+    padding-top: 30px;
+    text-align: center; }
+    nav.nav-bar span.balance span:first-of-type {
+      font-size: 22px; }
+    nav.nav-bar span.balance span:nth-of-type(2) {
+      padding-right: 40px; }
+    nav.nav-bar span.balance i.sz {
+      font-size: 18px;
+      color: #ddd;
+      margin-top: 10px;
+      float: right;
+      margin-right: 10px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer; }
+      nav.nav-bar span.balance i.sz:hover {
+        color: #ff2323;
+        transition: all 0.2s ease-in-out; }
+  nav.nav-bar div.availble-bounce {
+    border-right: 2px solid #ddd;
+    padding-top: 10px; }
+  nav.nav-bar div.newSession {
+    font-size: 36px;
+    margin: 0px 15px;
+    transition: all 0.2s ease-in-out; }
+    nav.nav-bar div.newSession i.fa-coffee {
+      cursor: pointer; }
+      nav.nav-bar div.newSession i.fa-coffee:hover {
+        color: #ff2323;
+        transition: all 0.2s ease-in-out; }
+  nav.nav-bar div.info {
+    padding-top: 10px;
+    position: relative; }
+    nav.nav-bar div.info div.drop-down {
+      transition: all 0.2s ease-in-out;
+      opacity: 0;
+      position: absolute;
+      left: -130px;
+      top: 70px;
+      background-color: rgba(11, 11, 11, 0.9);
+      font-weight: bold;
+      box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9); }
+      nav.nav-bar div.info div.drop-down ul {
+        position: relative;
+        width: 220px; }
+        nav.nav-bar div.info div.drop-down ul li {
+          padding: 10px 12px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out; }
+          nav.nav-bar div.info div.drop-down ul li:hover {
+            background-color: #f5f5f5;
+            transition: all 0.2s ease-in-out;
+            padding-left: 15px;
+            color: #ff2323;
+            text-shadow: 0px 0px 10px #ff2323; }
+        nav.nav-bar div.info div.drop-down ul:after {
+          position: absolute;
+          content: "";
+          border: 4px solid #ff2323;
+          border-width: 10px;
+          top: -20px;
+          right: 44px;
+          border-color: transparent transparent rgba(11, 11, 11, 0.9) transparent; }
+        nav.nav-bar div.info div.drop-down ul i {
+          padding-right: 10px; }
+    nav.nav-bar div.info div.cir {
+      overflow: hidden;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+      nav.nav-bar div.info div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      nav.nav-bar div.info div.cir img {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        position: absolute; }
+  nav.nav-bar i.sep {
+    color: #ddd;
+    font-size: 34px;
+    padding-top: 10px; }
+
+/* start of profile style */
+section.profile {
+  display: none;
+  opacity: 0;
+  margin: auto;
+  position: relative;
+  color: #fff; }
+  section.profile h2.head {
+    padding: 20px 0 40px 0; }
+  section.profile div.menu-header {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: -15%;
+    left: 42%; }
+    section.profile div.menu-header div.ponn {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: green;
+      z-index: 99; }
+    section.profile div.menu-header div.menu {
+      display: none;
+      background-color: #282828;
+      position: absolute;
+      bottom: -120%;
+      right: -100%;
+      z-index: 999;
+      box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9); }
+      section.profile div.menu-header div.menu ul {
+        width: 120px; }
+      section.profile div.menu-header div.menu li {
+        padding: 7px 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out; }
+        section.profile div.menu-header div.menu li:hover {
+          transition: all 0.2s ease-in-out;
+          background-color: #ddd;
+          padding-left: 13px; }
+      section.profile div.menu-header div.menu .active {
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        padding-left: 13px; }
+      section.profile div.menu-header div.menu li:first-of-type > i {
+        color: green; }
+      section.profile div.menu-header div.menu li:nth-of-type(2) > i {
+        color: black; }
+      section.profile div.menu-header div.menu li:last-of-type > i {
+        color: red; }
+  section.profile div.myInfo {
+    background-color: rgba(11, 11, 11, 0.9);
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.profile div.myInfo:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.profile div.myInfo h1, section.profile div.myInfo h2, section.profile div.myInfo h3, section.profile div.myInfo h4, section.profile div.myInfo h5, section.profile div.myInfo h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.profile div.myInfo table th {
+      padding: 8px 10px; }
+    section.profile div.myInfo button {
+      cursor: pointer;
+      border: 1px solid transparent;
+      background-color: #ff2323;
+      padding: 10px 30px;
+      border-radius: 30px;
+      transition: all 0.2s ease-in-out;
+      float: right; }
+      section.profile div.myInfo button:hover {
+        background-color: #282828;
+        border: 1px solid #ff2323;
+        color: #ff2323;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 5px #ddd;
+        -webkit-box-shadow: 4px 4px 5px #ddd;
+        -moz-box-shadow: 4px 4px 5px #ddd;
+        -ms-box-shadow: 4px 4px 5px #ddd;
+        -o-box-shadow: 4px 4px 5px #ddd; }
+    section.profile div.myInfo div.img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      overflow: hidden; }
+      section.profile div.myInfo div.img:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      section.profile div.myInfo div.img > img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; }
+    section.profile div.myInfo span.name {
+      text-align: center;
+      display: block;
+      font-size: 34px;
+      text-transform: capitalize; }
+  section.profile div.row2 div.wallet {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-right: 8.33333%; }
+    section.profile div.row2 div.wallet:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.profile div.row2 div.wallet h1, section.profile div.row2 div.wallet h2, section.profile div.row2 div.wallet h3, section.profile div.row2 div.wallet h4, section.profile div.row2 div.wallet h5, section.profile div.row2 div.wallet h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.profile div.row2 div.wallet table th {
+      padding: 8px 10px; }
+    section.profile div.row2 div.wallet button {
+      cursor: pointer;
+      border: 1px solid transparent;
+      background-color: #ff2323;
+      padding: 10px 30px;
+      border-radius: 30px;
+      transition: all 0.2s ease-in-out;
+      display: block;
+      margin: auto; }
+      section.profile div.row2 div.wallet button:hover {
+        background-color: #282828;
+        border: 1px solid #ff2323;
+        color: #ff2323;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 5px #ddd;
+        -webkit-box-shadow: 4px 4px 5px #ddd;
+        -moz-box-shadow: 4px 4px 5px #ddd;
+        -ms-box-shadow: 4px 4px 5px #ddd;
+        -o-box-shadow: 4px 4px 5px #ddd; }
+    section.profile div.row2 div.wallet p {
+      display: block;
+      text-align: center;
+      padding-top: 30px;
+      font-size: 24px;
+      color: #ff2323; }
+    section.profile div.row2 div.wallet div.cir {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out;
+      display: block;
+      margin: auto;
+      font-size: 64px;
+      padding-left: 16px;
+      margin-bottom: 30px;
+      color: #ff2323;
+      transition: all 0.2s ease-in-out; }
+      section.profile div.row2 div.wallet div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      section.profile div.row2 div.wallet div.cir:hover {
+        color: #ff2323;
+        transition: all 0.2s ease-in-out; }
+  section.profile div.row2 div.power {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.profile div.row2 div.power:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.profile div.row2 div.power h1, section.profile div.row2 div.power h2, section.profile div.row2 div.power h3, section.profile div.row2 div.power h4, section.profile div.row2 div.power h5, section.profile div.row2 div.power h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.profile div.row2 div.power table th {
+      padding: 8px 10px; }
+    section.profile div.row2 div.power div.content {
+      margin: 60px 0px 70px 0px; }
+      section.profile div.row2 div.power div.content div.left {
+        display: block;
+        text-align: center;
+        font-size: 21px;
+        padding-top: 20px; }
+      section.profile div.row2 div.power div.content div.right div.cir {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid rgba(11, 11, 11, 0.9);
+        transition: all 0.2s ease-in-out;
+        padding: 25px 0px 0px 20px;
+        color: #ff2323; }
+        section.profile div.row2 div.power div.content div.right div.cir:hover {
+          transition: all 0.2s ease-in-out;
+          box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          border-color: #ff2323; }
+    section.profile div.row2 div.power a {
+      color: #ff2323 !important;
+      float: right; }
+  section.profile div.activity {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.profile div.activity:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.profile div.activity h1, section.profile div.activity h2, section.profile div.activity h3, section.profile div.activity h4, section.profile div.activity h5, section.profile div.activity h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.profile div.activity table th {
+      padding: 8px 10px; }
+    section.profile div.activity div.controls {
+      position: relative;
+      float: right; }
+      section.profile div.activity div.controls > span {
+        cursor: pointer;
+        padding-right: 10px; }
+      section.profile div.activity div.controls span.active {
+        color: #ff2323; }
+      section.profile div.activity div.controls div.after {
+        content: " ";
+        width: 50%;
+        height: 3px;
+        background-color: #ff2323;
+        position: absolute;
+        top: 25px;
+        right: 50%;
+        transition: all 0.5s cubic-bezier(0.09, 0.67, 0.58, 1); }
+  section.profile div.slide {
+    width: 100%;
+    display: block;
+    margin: 50px auto;
+    overflow-x: hidden; }
+    section.profile div.slide div.inner {
+      transition: all 0.5s cubic-bezier(0.09, 0.67, 0.58, 1);
+      width: 200%;
+      position: relative; }
+      section.profile div.slide div.inner div.session,
+      section.profile div.slide div.inner div.myWallet {
+        width: 50%;
+        float: left !important; }
+        section.profile div.slide div.inner div.session tr,
+        section.profile div.slide div.inner div.myWallet tr {
+          border-radius: 5px;
+          text-align: center;
+          background-color: rgba(11, 11, 11, 0.9);
+          box-shadow: 0px 0px 5px rgba(11, 11, 11, 0.9);
+          margin-bottom: 30px !important; }
+        section.profile div.slide div.inner div.session tr.head,
+        section.profile div.slide div.inner div.myWallet tr.head {
+          color: #b2a9c1;
+          margin-bottom: 20px;
+          box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9); }
+        section.profile div.slide div.inner div.session table,
+        section.profile div.slide div.inner div.myWallet table {
+          width: 100%; }
+          section.profile div.slide div.inner div.session table th,
+          section.profile div.slide div.inner div.myWallet table th {
+            font-family: "Abel", sans-serif; }
+            section.profile div.slide div.inner div.session table th span,
+            section.profile div.slide div.inner div.myWallet table th span {
+              color: #00d272; }
+              section.profile div.slide div.inner div.session table th span sup,
+              section.profile div.slide div.inner div.myWallet table th span sup {
+                font-weight: bolder; }
+            section.profile div.slide div.inner div.session table th i,
+            section.profile div.slide div.inner div.myWallet table th i {
+              color: #ff2323; }
+  section.profile div.following {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center; }
+    section.profile div.following:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.profile div.following h1, section.profile div.following h2, section.profile div.following h3, section.profile div.following h4, section.profile div.following h5, section.profile div.following h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.profile div.following table th {
+      padding: 8px 10px; }
+    section.profile div.following span.outter {
+      padding: 20px 0px;
+      display: block;
+      font-weight: bolder;
+      opacity: 0; }
+    section.profile div.following div.cir {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out;
+      padding-top: 10px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      font-family: "Abel", sans-serif; }
+      section.profile div.following div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      section.profile div.following div.cir div.after, section.profile div.following div.cir div.before {
+        position: absolute;
+        overflow: hidden;
+        font-size: 34px;
+        height: 50%;
+        width: 100%;
+        color: #fff;
+        transition: all 0.2s ease-in-out; }
+      section.profile div.following div.cir div.after {
+        padding-top: 31%;
+        background-color: #ff2323;
+        top: 0px;
+        left: 0px; }
+      section.profile div.following div.cir div.before {
+        background-color: #000;
+        bottom: 0px;
+        left: 0px; }
+        section.profile div.following div.cir div.before span {
+          margin-top: -20%;
+          display: block; }
+      section.profile div.following div.cir span.number {
+        font-size: 74px; }
+
+div.feedbacks {
+  border-radius: 4px;
+  background-color: #282828;
+  box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+  -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+  -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+  -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+  -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
+  margin-bottom: 30px; }
+  div.feedbacks:hover {
+    box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out; }
+  div.feedbacks h1, div.feedbacks h2, div.feedbacks h3, div.feedbacks h4, div.feedbacks h5, div.feedbacks h6 {
+    color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 34px;
+    font-family: "Krona One", sans-serif; }
+  div.feedbacks table th {
+    padding: 8px 10px; }
+  div.feedbacks div.tbl div.cir {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    margin: auto; }
+    div.feedbacks div.tbl div.cir:hover {
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+      border-color: #ff2323; }
+    div.feedbacks div.tbl div.cir img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 1px; }
+  div.feedbacks div.tbl tr.head {
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9); }
+  div.feedbacks div.tbl tr {
+    box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+    color: #fff; }
+  div.feedbacks div.tbl div {
+    margin-bottom: 30px; }
+  div.feedbacks div.tbl table {
+    width: 100%; }
+  div.feedbacks div.tbl table {
+    text-align: center; }
+    div.feedbacks div.tbl table th:first-of-type {
+      width: 10%; }
+    div.feedbacks div.tbl table th:nth-of-type(2) {
+      width: 15%; }
+    div.feedbacks div.tbl table th:nth-of-type(3) {
+      width: 20%; }
+    div.feedbacks div.tbl table th:nth-of-type(4) {
+      width: 20%; }
+    div.feedbacks div.tbl table th:nth-of-type(5) {
+      width: 20%; }
+    div.feedbacks div.tbl table div.stars i.fas {
+      color: #FFDF00;
+      text-shadow: 0px 0px 10px #FFDF00; }
+
+section.admin-panel {
+  margin: auto; }
+  section.admin-panel h2 {
+    padding-bottom: 50px;
+    color: rgba(0, 0, 0, 0.85); }
+  section.admin-panel div.stat {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #fff; }
+    section.admin-panel div.stat:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.admin-panel div.stat h1, section.admin-panel div.stat h2, section.admin-panel div.stat h3, section.admin-panel div.stat h4, section.admin-panel div.stat h5, section.admin-panel div.stat h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.admin-panel div.stat table th {
+      padding: 8px 10px; }
+    section.admin-panel div.stat div.con {
+      width: 24%;
+      display: inline-block; }
+      section.admin-panel div.stat div.con p {
+        text-align: center;
+        font-size: 24px;
+        display: block; }
+      section.admin-panel div.stat div.con div.cir {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid rgba(11, 11, 11, 0.9);
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 34px;
+        margin: auto; }
+        section.admin-panel div.stat div.con div.cir:hover {
+          transition: all 0.2s ease-in-out;
+          box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+          border-color: #ff2323; }
+  section.admin-panel div.manage-user {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.admin-panel div.manage-user:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.admin-panel div.manage-user h1, section.admin-panel div.manage-user h2, section.admin-panel div.manage-user h3, section.admin-panel div.manage-user h4, section.admin-panel div.manage-user h5, section.admin-panel div.manage-user h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.admin-panel div.manage-user table th {
+      padding: 8px 10px; }
+    section.admin-panel div.manage-user tr.head {
+      color: #fff;
+      box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9); }
+    section.admin-panel div.manage-user tr {
+      box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      color: #fff; }
+    section.admin-panel div.manage-user div {
+      margin-bottom: 30px; }
+    section.admin-panel div.manage-user table {
+      width: 100%; }
+    section.admin-panel div.manage-user table {
+      text-align: center; }
+      section.admin-panel div.manage-user table th:first-of-type {
+        width: 10%; }
+      section.admin-panel div.manage-user table th:nth-of-type(2) {
+        width: 15%; }
+      section.admin-panel div.manage-user table th:nth-of-type(3) {
+        width: 20%; }
+      section.admin-panel div.manage-user table th:nth-of-type(4) {
+        width: 20%; }
+      section.admin-panel div.manage-user table th:nth-of-type(5) {
+        width: 20%; }
+      section.admin-panel div.manage-user table div.stars i.fas {
+        color: #FFDF00;
+        text-shadow: 0px 0px 10px #FFDF00; }
+    section.admin-panel div.manage-user div.cir {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out;
+      overflow: hidden;
+      position: relative;
+      margin: auto; }
+      section.admin-panel div.manage-user div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      section.admin-panel div.manage-user div.cir img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 1px; }
+    section.admin-panel div.manage-user button {
+      cursor: pointer;
+      border: 1px solid #ff2323;
+      background-color: #282828;
+      color: #ff2323;
+      padding: 10px 8px;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out; }
+      section.admin-panel div.manage-user button:hover {
+        background-color: #ff2323;
+        color: #282828;
+        border: 1px solid #ff2323;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 5px #ddd;
+        -webkit-box-shadow: 4px 4px 5px #ddd;
+        -moz-box-shadow: 4px 4px 5px #ddd;
+        -ms-box-shadow: 4px 4px 5px #ddd;
+        -o-box-shadow: 4px 4px 5px #ddd; }
+    section.admin-panel div.manage-user button.danger:hover {
+      background-color: #ff2323; }
+  section.admin-panel div.manage-cats {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.admin-panel div.manage-cats:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.admin-panel div.manage-cats h1, section.admin-panel div.manage-cats h2, section.admin-panel div.manage-cats h3, section.admin-panel div.manage-cats h4, section.admin-panel div.manage-cats h5, section.admin-panel div.manage-cats h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.admin-panel div.manage-cats table th {
+      padding: 8px 10px; }
+    section.admin-panel div.manage-cats tr.head {
+      color: #fff;
+      box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9); }
+    section.admin-panel div.manage-cats tr {
+      box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      color: #fff; }
+    section.admin-panel div.manage-cats div {
+      margin-bottom: 30px; }
+    section.admin-panel div.manage-cats table {
+      width: 100%; }
+    section.admin-panel div.manage-cats table {
+      text-align: center; }
+      section.admin-panel div.manage-cats table th:first-of-type {
+        width: 10%; }
+      section.admin-panel div.manage-cats table th:nth-of-type(2) {
+        width: 15%; }
+      section.admin-panel div.manage-cats table th:nth-of-type(3) {
+        width: 20%; }
+      section.admin-panel div.manage-cats table th:nth-of-type(4) {
+        width: 20%; }
+      section.admin-panel div.manage-cats table th:nth-of-type(5) {
+        width: 20%; }
+      section.admin-panel div.manage-cats table div.stars i.fas {
+        color: #FFDF00;
+        text-shadow: 0px 0px 10px #FFDF00; }
+    section.admin-panel div.manage-cats table {
+      margin-bottom: 20px; }
+    section.admin-panel div.manage-cats div.cir {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      font-size: 28px; }
+      section.admin-panel div.manage-cats div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -webkit-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -moz-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -ms-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        -o-box-shadow: 0px 0px 10px rgba(11, 11, 11, 0.9);
+        border-color: #ff2323; }
+      section.admin-panel div.manage-cats div.cir img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 1px; }
+    section.admin-panel div.manage-cats button {
+      cursor: pointer;
+      border: 1px solid #ff2323;
+      background-color: #282828;
+      color: #ff2323;
+      padding: 10px 8px;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out; }
+      section.admin-panel div.manage-cats button:hover {
+        background-color: #ff2323;
+        color: #282828;
+        border: 1px solid #ff2323;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 5px #ddd;
+        -webkit-box-shadow: 4px 4px 5px #ddd;
+        -moz-box-shadow: 4px 4px 5px #ddd;
+        -ms-box-shadow: 4px 4px 5px #ddd;
+        -o-box-shadow: 4px 4px 5px #ddd; }
+    section.admin-panel div.manage-cats button.danger:hover {
+      background-color: #ff2323; }
+  section.admin-panel div.manage-session {
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -webkit-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -moz-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -ms-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    -o-box-shadow: 0px 0px 30px rgba(11, 11, 11, 0.9);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.admin-panel div.manage-session:hover {
+      box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 50px rgba(11, 11, 11, 0.9);
+      transition: all 0.2s ease-in-out; }
+    section.admin-panel div.manage-session h1, section.admin-panel div.manage-session h2, section.admin-panel div.manage-session h3, section.admin-panel div.manage-session h4, section.admin-panel div.manage-session h5, section.admin-panel div.manage-session h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.admin-panel div.manage-session table th {
+      padding: 8px 10px; }
+    section.admin-panel div.manage-session tr.head {
+      color: #fff;
+      box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 0px rgba(11, 11, 11, 0.9); }
+    section.admin-panel div.manage-session tr {
+      box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -webkit-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -moz-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -ms-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      -o-box-shadow: 0px 0px 2px rgba(11, 11, 11, 0.9);
+      color: #fff; }
+    section.admin-panel div.manage-session div {
+      margin-bottom: 30px; }
+    section.admin-panel div.manage-session table {
+      width: 100%; }
+    section.admin-panel div.manage-session table {
+      text-align: center; }
+      section.admin-panel div.manage-session table th:first-of-type {
+        width: 5%; }
+      section.admin-panel div.manage-session table th:nth-of-type(2) {
+        width: 10%; }
+      section.admin-panel div.manage-session table th:nth-of-type(3) {
+        width: 10%; }
+      section.admin-panel div.manage-session table th:nth-of-type(4) {
+        width: 20%; }
+      section.admin-panel div.manage-session table th:nth-of-type(5) {
+        width: 20%; }
+      section.admin-panel div.manage-session table th:nth-of-type(6) {
+        width: 15%; }
+      section.admin-panel div.manage-session table th:nth-of-type(7) {
+        width: 20%; }
+    section.admin-panel div.manage-session table {
+      margin-bottom: 20px; }
+    section.admin-panel div.manage-session button {
+      cursor: pointer;
+      border: 1px solid #ff2323;
+      background-color: #282828;
+      color: #ff2323;
+      padding: 10px 8px;
+      border-radius: 4px;
+      transition: all 0.2s ease-in-out; }
+      section.admin-panel div.manage-session button:hover {
+        background-color: #ff2323;
+        color: #282828;
+        border: 1px solid #ff2323;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 5px #ddd;
+        -webkit-box-shadow: 4px 4px 5px #ddd;
+        -moz-box-shadow: 4px 4px 5px #ddd;
+        -ms-box-shadow: 4px 4px 5px #ddd;
+        -o-box-shadow: 4px 4px 5px #ddd; }
+    section.admin-panel div.manage-session button.danger:hover {
+      background-color: #ff2323; }
+    section.admin-panel div.manage-session i.on {
+      color: #32CD32; }
+    section.admin-panel div.manage-session i.off {
+      color: #ff2323; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+input {
+  outline: medium none currentcolor; }
+
+body {
+  background-color: rgba(11, 11, 11, 0.9);
+  margin-top: 100px;
+  width: 104%;
+  overflow-x: hidden; }
+
+.blur {
+  color: #ddd; }
+
+i.fa {
+  font-size: 26px; }
+
+.rotate-180 {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(180deg);
+  color: #ff2323;
+  transform-origin: center; }
+
+/*# sourceMappingURL=frontEnd.css.map */
