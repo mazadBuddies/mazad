@@ -15,7 +15,11 @@ git commit -m "v.1.0.8"
 git merge master
 git push --set-upstream origin feature1
 git pull
+test
+test test test
 */
+
+
 $mashKind = "linux";// linux
 ini_set('display_errors', 1);//this for show errs
 error_reporting(~0);// the same target
