@@ -1,6 +1,3 @@
-/* abdo elgin */
-"testing";
-
 $('div.border').append("<div class='bor'></div>");
 $('div.menu-header').append("<div class='ponn'></div>");
 if($('div.add-icon').children('input').data('show') === true){
