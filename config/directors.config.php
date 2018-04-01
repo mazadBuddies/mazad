@@ -15,13 +15,9 @@ git commit -m "v.1.0.8"
 git merge master
 git push --set-upstream origin feature1
 git pull
-test
-test test test
 */
 
-
-
-
+/*test to compare two branches */
 
 
 $mashKind = "linux";// linux
@@ -54,4 +50,3 @@ define("DB_USER", "root"); // user name of database
 define("DB_PASS", $dataBasePassword); // password of data base
 /* END OF DEFINES */
 //include_once CLASS_DIR . "autoLoader.class.php";
-
