@@ -1,0 +1,85 @@
+div.form{
+    width: 100%;
+    
+    border-radius: 0px 0px 7px 7px;
+    //background-color;
+    margin:auto;
+    margin-bottom: 100px;
+    div.myCon{
+        width: 90%;
+        margin: auto;
+    }
+    textarea{
+        background-color: #fff;
+        border:0px;
+        color:#000;
+    }
+    h2{
+        @include myHeading();
+        @include myHeadingPadding();
+        
+    }
+    label{
+        color:$main-color;
+        font-size:16px;
+        margin-left: -15px;
+    }
+    input{
+        background-color: #fff;
+        @include myInput();
+        @include myInputBorder();
+        @include smooth();
+        position: relative;
+        &:focus{
+            background: #fff;
+            //border-color: #000;
+            @include smooth();
+        }
+    }
+    input[type="submit"]{
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 30px;
+        padding: 10px;
+        background-color: $main-color;
+        border:2px solid transparent;
+        color:#fff;
+        @include smooth();
+        
+        &:hover{
+            @include smooth();
+            background-color: transparent;
+            border:2px solid $main-color;
+            color:$main-color;
+        }
+    }
+    p{
+        text-align: center;
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-bottom: 18px;
+    }
+    p.gen{
+        color:$main-color;
+    }
+    div.border{
+    position: relative;
+    height: 45%;
+    >div.bor{
+        position: absolute;
+        content: ' ';
+        width: 0%;
+        height: 2px;
+        bottom: 0px;
+        left: 50%;
+        background-color:$main-color;
+    }
+    >i.fa.show{
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }    
+}
+}

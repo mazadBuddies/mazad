@@ -1,0 +1,66 @@
+$social-media-colors : ("facebook", #3b5998),
+("Twitter", #00aced),
+("Google+", #dd4b39),
+("Linkedin", #007bb6),
+("YouTube", #bb0000),
+("Instagram", #517fa4);
+
+//start colors of theme 1
+$main-color: rgb(4, 5, 70);
+$sec-color : #fff;
+$def:#fff;
+$font-color : #000;
+$font-color2: #fff;
+
+//start colors of theme 2
+/*
+$main-color: #ff2323;
+$sec-color :  #282828;
+$def:rgba(11,11,11,0.9);
+$font-color : #fff;
+*/
+$font-color-w : #fff;
+$table-font-color:rgb(178, 169, 193);
+$link-color:#ff2323;
+$icon-color: #ddd;
+
+
+
+/*start of heading color*/
+$heading-color: #fff;
+/*end of heading color*/
+
+/*start of global colors*/
+$green:#32CD32;
+$red:#ff2323;
+$shadow-color: #ddd;//theme1
+$sec-shadow-color: #000;
+//$shadow-color: $def; //theme2
+/*end of global colors*/
+
+/*start of font size*/
+$font-sm : 10px;
+$font-md : 18px;
+$font-lg : 24px;
+$font-xlg : 34px;
+/*end of font size*/
+
+
+$overlay-color: rgba(0,0,0,0.6);
+/*
+rgb(4, 5, 70)
+rgb(150,10,30)
+*/
+
+
+/*
+$main-color: #270226;
+$sec-color : #343042;
+$third-color : #FEFDFE;
+$background-color:#2F353B;
+$input-color:#3D424B;
+$icon-color:#5F6366;
+$icon-background:#393D43;
+$main : #F70083;
+ 
+*/

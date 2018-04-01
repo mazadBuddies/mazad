@@ -1,0 +1,32 @@
+.overlay{
+	content: 			"";
+	position: 			absolute;
+	width: 				100vw;
+	height: 			200vh;
+	background-color: 	$overlay-color;
+	overflow: scroll;
+	top: 				0px;
+	left: 				0px;
+	z-index: 			10000;
+	display: 			none;
+	opacity: 			0;
+	padding-top: 10vh;
+	.edit{
+		opacity: 0;
+	}
+	.exit-icon{
+		position: fixed;
+		top :30px;
+		left: 30px;
+		font-size: 			$font-xlg;
+		color: 				$icon-color;
+		display: 			none;
+		opacity: 			0;
+		cursor:				pointer;
+		@include smooth();
+		&:hover{
+			color:$main-color;
+			@include smooth();
+		}
+	}
+}

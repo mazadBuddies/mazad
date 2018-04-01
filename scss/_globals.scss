@@ -1,0 +1,312 @@
+a{
+    color:$link-color;
+    &:hover{
+        color:$link-color;
+        text-decoration: none;
+    }
+}
+
+@mixin myInput(){
+    border: 0px;
+    padding: 7px;
+    color : $heading-color;
+    margin-bottom: 18px;
+}
+@mixin myInputBorder(){
+    border: 1px solid transparent;
+}
+@mixin myHeading(){
+    color:$heading-color;
+    font-weight: bold;
+}
+
+@mixin myHeadingPadding(){
+    padding: 18px 0px;
+}
+
+@mixin smooth(){
+    transition: all 0.2s ease-in-out;
+}
+@mixin smooth2($ss){
+    transition: all $ss ease-in-out;
+}
+
+@mixin bold(){
+    font-weight: bold;
+}
+
+@mixin box-style($val){
+    @if($val == 1)
+    {
+        border-radius: 4px;
+        background-color: $sec-color;
+        @include box-shadow(0px 0px 30px $shadow-color);
+        @include smooth();
+        padding: 20px;
+        margin-bottom: 30px;
+        &:hover{
+            @include box-shadow(0px 0px 50px $shadow-color);
+            @include smooth();
+        }
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-color;
+            color: $font-color;
+            font-size : $font-xlg;
+            font-family: $first-font;
+        }
+        table{
+            th{
+                padding: 8px 10px ;
+            }
+        }
+    }
+}
+
+@mixin btn-style($val){
+    cursor: pointer;
+    @if($val == 1){
+        border: 1px solid transparent;
+        background-color: $main-color;
+        padding: 10px 30px;
+        border-radius: 30px;
+        @include smooth();
+        &:hover{
+            background-color: $sec-color;
+            border: 1px solid $main-color;
+            color: $main-color;
+            @include smooth();
+            @include box-shadow(4px 4px 5px #ddd);
+        }
+    }
+
+    @if($val == 2){
+        border: 1px solid $main-color;
+        background-color: $sec-color;
+        color: $main-color;
+        padding: 10px 8px;
+        border-radius: 4px;
+        @include smooth();
+        &:hover{
+            background-color: $main-color;
+            color:$sec-color;
+            border: 1px solid $main-color;
+            @include smooth();
+            @include box-shadow(4px 4px 5px #ddd);
+        }
+    }
+}
+
+@mixin cir($w){
+    width: $w;
+    height: $w;
+    border-radius: 50%;
+    border:3px solid $shadow-color;
+    @include smooth();
+    &:hover{
+        @include smooth();
+        @include box-shadow(0px 0px 10px $shadow-color);
+        border-color:$main-color;
+    }
+}
+
+@mixin cen(){
+    display: block;
+    margin: auto;
+}
+
+@mixin par($var){
+    @if($var == 1 ){
+        display: block;
+        text-align: center;
+    }
+
+}
+
+@mixin tbl(){
+    tr{
+        border-radius: 5px;
+        text-align: center;
+        background-color: $def;
+        box-shadow: 0px 0px 5px $shadow-color;// rgb(206, 215, 224) ;
+        //display: block;
+        margin-bottom: 30px!important;
+       
+    }
+    tr.head{
+        color:$table-font-color;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 0px $shadow-color;
+    }
+}
+
+@mixin icon-hover($val){
+    margin-right: 10px;
+    @if($val == 1)
+    {
+        @include smooth();
+        cursor: pointer;
+        &:hover{
+            color:$main-color;
+            @include smooth();
+        }
+    }
+}
+
+@mixin table-style($val){
+    tr.head{
+        color: $font-color;
+        @include box-shadow(0px 0px 0px $shadow-color);
+    }
+    tr{@include box-shadow(0px 0px 2px $shadow-color);
+        color: $font-color;
+    }
+    div{
+        margin-bottom: 30px;
+    }
+    table{width: 100%;}
+    @if($val == 1){
+        table{
+            text-align: center;
+            
+            th:first-of-type{
+                width: 10%;
+            }th:nth-of-type(2){
+                width: 15%;
+            }
+            th:nth-of-type(3){
+                width: 20%;
+            }
+            th:nth-of-type(4){
+                width: 20%;
+            }
+            th:nth-of-type(5){
+                width: 20%;
+            }
+            div.stars{
+                i.fas{
+                    color:#FFDF00;
+                    text-shadow: 0px 0px 10px #FFDF00;
+                }
+            }
+        }
+    }
+    @if($val ==2){
+        table{
+            text-align: center;
+            tr.head{
+                color:$shadow-color;
+            }
+            th{
+                width: 20%;
+            }
+            div.stars{
+                i.fas{
+                    color:#FFDF00;
+                    text-shadow: 0px 0px 10px #FFDF00;
+                }
+            }
+        }
+        
+    }
+
+    @if($val == 3){
+        table{
+            text-align: center;
+            th:first-of-type{
+                width: 5%;
+            }th:nth-of-type(2){
+                width: 10%;
+            }
+            
+            th:nth-of-type(3){
+                width: 10%;
+            }
+            th:nth-of-type(4){
+                width: 20%;
+            }
+            th:nth-of-type(5){
+                width: 20%;
+            }
+            th:nth-of-type(6){
+                width: 15%;
+            }
+            th:nth-of-type(7){
+                width: 20%;
+            }
+    }
+
+    }
+}
+
+@mixin switch($wid, $hei, $onColor, $offColor, $dotColor){
+    width: $wid/2;
+    height: $hei;
+    position: relative;
+    color : #fff;
+    border-radius: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    @include smooth();
+    @include box-shadow(1px 1px 10px $sec-shadow-color);
+    &:hover{
+        @include box-shadow(10px 10px 10px $shadow-color);
+    }
+    .sig{
+        width: $wid * 2;
+        position: absolute;
+        //left:-10px;//-14px -60px
+    }
+    
+    
+    .on,.off{
+        width: ($wid/2);
+        height: $hei;
+        float: left;
+    }
+    .on{
+        background-color: $onColor;
+        padding-left: 10px;
+    }
+    .off{
+        background-color: $offColor;
+        padding-left: 25px;
+    }
+    .sp{
+        width: 5px;
+        height: $hei;
+        background-color: #fff;
+        float: left;
+        position: relative;
+    }
+    .dot
+    {
+        width: $hei;
+        height: $hei;
+        //right: 237px;
+        left: -$hei/2;;//(($wid/2) - $hei) ;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        
+    }
+}
+
+@mixin my-img(){
+    background-size: cover;
+}
+
+@mixin overLay($back){
+    position: relative;
+    z-index: 1;
+    &:after{
+        content: "";
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left: 0px;
+        position: absolute;
+        background-color: $back;
+        z-index: -1;
+    }
+}

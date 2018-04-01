@@ -1,0 +1,89 @@
+
+section.admin-panel{
+    margin: auto;
+    h2{
+        padding-bottom: 50px;
+        color: $heading-color;
+    }
+    div.stat{
+        @include box-style(1);
+        color: $font-color;
+        div.con{
+            width: 24%;
+            display: inline-block;
+            p{
+                text-align: center;
+                font-size:$font-lg;
+                display: block;
+            }
+            div.cir{
+                @include cir(100px);
+                text-align: center;
+                padding-top: 20px;
+                font-size: $font-xlg;
+                margin: auto;
+            }
+        }
+    }//end of div.stat
+    div.manage-user{
+        @include box-style(1);
+        @include table-style(1);
+        div.cir{
+            @include cir(50px);
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left:1px;
+            }
+        }
+        button{@include btn-style(2);}
+        button.danger{&:hover{background-color:$red;}}
+        button.good{&:hover{background-color:$green;
+        @include box-shadow(0px 0px 10px $green);}
+
+        }
+    }
+
+    div.manage-cats{
+        @include box-style(1);
+        @include table-style(1);
+        table{
+            margin-bottom: 20px;
+        }
+        div.cir{
+            @include cir(50px);
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            font-size:$font-lg + 4px;
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left:1px;
+            }
+        }
+        button{@include btn-style(2);}
+        button.danger{&:hover{background-color:#ff2323;}}
+    }
+
+    div.manage-session{
+        @include box-style(1);
+        @include table-style(3);
+        table{
+            margin-bottom: 20px;
+        }
+        button{@include btn-style(2);}
+        button.danger{&:hover{background-color:#ff2323;}}
+        i.on{
+            color: $green;
+        }
+        i.off{
+            color: $red;
+        }
+    }
+}//end of section admin-panel
