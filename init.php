@@ -16,7 +16,7 @@ include CLASS_DIR . "autoLoader.class.php";
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/selectize.default.css"/>
     <link rel="stylesheet" href="css/styles/loader.css">
-    <?php includeStyles();?>
-    <link rel="stylesheet" href="css/styles/frontEnd.css" class="sepp"/> <!-- STRONG STYLE-->
+    <?php $numberOfStyles = includeStyles();?>
+    <link rel="stylesheet" href="css/styles/frontEnd1.css" class="sepp" data-count="4" data-cur="1"/> <!-- STRONG STYLE-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
 </head>

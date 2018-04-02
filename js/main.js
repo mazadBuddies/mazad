@@ -114,13 +114,17 @@ $("i.ll").on("click", function(){
 // start of change theme of of website ----not finished---
 var style = $("link.sepp");
 $("ul li.chng").on("click", function(){
-    var STYLE_ROOT = "css/styles/";
     "use strict";
-    if($("link.sepp").attr("href") ==  STYLE_ROOT +"frontEnd.css" ){
-        $("link.sepp").attr("href", STYLE_ROOT + "frontEnd2.css");
-    }else{
-        $("link.sepp").attr("href", STYLE_ROOT + "frontEnd.css");
+    var STYLE_ROOT        = "/mazad/css/styles/";
+    var themeCountNumber  = $("link.sepp").data('count');
+    var currentTheme      = $("link.sepp").data('cur');
+    var nextTheme         = currentTheme + 1;
+    if(nextTheme > themeCountNumber){
+        nextTheme = 1;
     }
+    var nextThemePathName = STYLE_ROOT + "frontEnd" + nextTheme + ".css";
+    $("link.sepp").attr('href', nextThemePathName);
+    $("link.sepp").data('cur', nextTheme);
 });
 
 // start of append switch content to assig css
@@ -150,7 +154,7 @@ $('.switch').on("click", function(){
 });
 
 // start of show value of range input
-$('input[type="range"]').on("click", function(){
+$('input[type="range"]').on("change", function(){
     "use strict";
     var value = document.getElementById('val');
     value.innerHTML = $('input[type="range"]').val();

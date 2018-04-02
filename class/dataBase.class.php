@@ -1,7 +1,7 @@
 <?php
 /*
  ************** this file include for globals ********************
- *           this V.1.0 of mazad website at 2 feb 2018           *
+ *           this V.2.1.1 of mazad website at 2 feb 2018         *
  *          this file contains database class                    *
  *****************************************************************
 */
@@ -333,8 +333,6 @@
 
 
 //$test->insert(array("icon","sessionName", "numOfSession", "details"),array("fa-car", "cars", 5, "testtest"));
-    
-    
     //$array1 = array('firstName', 'lastName', 'gender','userName','email','userPassword', 'imagePath','userRole');
     //$array2 = array('abdelrhman', 'solieman',1,'bodey__Solieman2', 'abdelr2hman.solieman98@gmail.com', sha1('1234A'),'test',1);
     //$array1 = array('fromId','toId', 'details');

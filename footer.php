@@ -6,5 +6,6 @@
 <script src=<?php echo "'" . JS_DIR . "selectize.min.js" . "'";?>></script>
 <script src=<?php echo "'" . JS_DIR . "loader.js" . "'";?>></script>
 <script src=<?php echo "'" . JS_DIR . "ajaxRequestMainPages.js" . "'";?>></script>
+<script src=<?php echo "'" . JS_DIR . "forms.js" . "'";?> ></script>
 <script src=<?php echo "'" . JS_DIR . "main.js" . "'";?> ></script>
 </html>
