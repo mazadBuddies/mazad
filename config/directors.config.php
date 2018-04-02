@@ -50,4 +50,3 @@ define("DB_USER", "root"); // user name of database
 define("DB_PASS", $dataBasePassword); // password of data base
 /* END OF DEFINES */
 //include_once CLASS_DIR . "autoLoader.class.php";
-

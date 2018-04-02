@@ -17,6 +17,7 @@ function includeStyles(){
         if(substr($allStyles[$i], -4) == STYLE_EX) // if file is .css include it
             echo '<link rel="stylesheet" href="' . STYLE_DIR . $allStyles[$i] . '"/>';
     }//end of for
+    return sizeof($allStyles);// added ******************************
 }// end of function includeStyle
 
 function getLastId($tableName, $colName= 'id'){

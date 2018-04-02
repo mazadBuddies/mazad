@@ -1,22 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2018, 9:00:21 PM
-    Author     : boodey
-*/
-/*
-$main-color: #ff2323;
-$sec-color :  #282828;
-$def:rgba(11,11,11,0.9);
-$font-color : #fff;
-*/
-/*start of heading color*/
-/*end of heading color*/
-/*start of global colors*/
-/*end of global colors*/
 /*start of font size*/
 /*end of font size*/
 /*
@@ -33,6 +14,19 @@ $icon-color:#5F6366;
 $icon-background:#393D43;
 $main : #F70083;
  
+*/
+/*start of heading color*/
+/*end of heading color*/
+/*start of global colors*/
+/*end of global colors*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2018, 9:00:21 PM
+    Author     : boodey
 */
 a {
   color: #ff2323; }
@@ -77,7 +71,7 @@ div.form {
     font-weight: bold;
     padding: 18px 0px; }
   div.form label {
-    color: #040546;
+    color: #F6993F;
     font-size: 16px;
     margin-left: -15px; }
   div.form input {
@@ -98,15 +92,15 @@ div.form {
     margin: 20px auto;
     border-radius: 30px;
     padding: 10px;
-    background-color: #040546;
+    background-color: #F6993F;
     border: 2px solid transparent;
     color: #fff;
     transition: all 0.2s ease-in-out; }
     div.form input[type="submit"]:hover {
       transition: all 0.2s ease-in-out;
       background-color: transparent;
-      border: 2px solid #040546;
-      color: #040546; }
+      border: 2px solid #F6993F;
+      color: #F6993F; }
   div.form p {
     text-align: center;
     width: 80%;
@@ -114,7 +108,7 @@ div.form {
     margin: auto;
     padding-bottom: 18px; }
   div.form p.gen {
-    color: #040546; }
+    color: #F6993F; }
   div.form div.border {
     position: relative;
     height: 45%; }
@@ -125,7 +119,7 @@ div.form {
       height: 2px;
       bottom: 0px;
       left: 50%;
-      background-color: #040546; }
+      background-color: #F6993F; }
     div.form div.border > i.fa.show {
       position: absolute;
       top: 8px;
@@ -158,14 +152,14 @@ div.login span.dir-signUp {
 
 /*start of aside style*/
 aside.left-side {
-  background-color: #fff;
+  background-color: #DAE1E7;
   color: #000;
   z-index: 1000;
   position: fixed;
   bottom: 0px;
   font-size: 18px;
   width: 60px;
-  box-shadow: 2px 2px 2px #ddd;
+  box-shadow: 2px 2px 2px transparent;
   overflow-x: hidden;
   transition: all 0.2s ease-in-out; }
   aside.left-side:hover {
@@ -191,20 +185,20 @@ aside.left-side {
     aside.left-side li > i, aside.left-side li div.chng, aside.left-side div.chng > i, aside.left-side div.chng div.chng {
       padding-right: 20px; }
   aside.left-side li.active {
-    border-left: 4px solid #040546;
-    color: #040546; }
+    border-left: 4px solid #F6993F;
+    color: #F6993F; }
 
 /*end of aside style*/
 /*start of nav style*/
 nav.nav-bar {
-  box-shadow: 2px 2px 2px #ddd;
-  -webkit-box-shadow: 2px 2px 2px #ddd;
-  -moz-box-shadow: 2px 2px 2px #ddd;
-  -ms-box-shadow: 2px 2px 2px #ddd;
-  -o-box-shadow: 2px 2px 2px #ddd;
+  box-shadow: 2px 2px 2px transparent;
+  -webkit-box-shadow: 2px 2px 2px transparent;
+  -moz-box-shadow: 2px 2px 2px transparent;
+  -ms-box-shadow: 2px 2px 2px transparent;
+  -o-box-shadow: 2px 2px 2px transparent;
   width: 100vw;
   font-family: "Abel", sans-serif;
-  background-color: #fff;
+  background-color: #DAE1E7;
   padding-top: 8px;
   position: fixed;
   top: 0px;
@@ -219,7 +213,7 @@ nav.nav-bar {
     top: 18px;
     right: -30px; }
     nav.nav-bar i.fa.ll:hover {
-      color: #040546;
+      color: #F6993F;
       transition: all 0.2s ease-in-out; }
   nav.nav-bar div.name {
     font-size: 24px;
@@ -233,11 +227,11 @@ nav.nav-bar {
     font-family: "Krona One", sans-serif;
     font-weight: bolder; }
     nav.nav-bar span.name span.fir {
-      color: #040546; }
+      color: #F6993F; }
     nav.nav-bar span.name span.sec {
       color: #000; }
   nav.nav-bar a {
-    color: #040546;
+    color: #F6993F;
     font-size: 34px; }
   nav.nav-bar span.bold {
     font-weight: bold;
@@ -260,7 +254,7 @@ nav.nav-bar {
       transition: all 0.2s ease-in-out;
       cursor: pointer; }
       nav.nav-bar span.balance i.sz:hover {
-        color: #040546;
+        color: #F6993F;
         transition: all 0.2s ease-in-out; }
   nav.nav-bar div.availble-bounce {
     border-right: 2px solid #ddd;
@@ -272,7 +266,7 @@ nav.nav-bar {
     nav.nav-bar div.newSession i.fa-coffee {
       cursor: pointer; }
       nav.nav-bar div.newSession i.fa-coffee:hover {
-        color: #040546;
+        color: #F6993F;
         transition: all 0.2s ease-in-out; }
   nav.nav-bar div.info {
     padding-top: 10px;
@@ -283,9 +277,9 @@ nav.nav-bar {
       position: absolute;
       left: -130px;
       top: 70px;
-      background-color: #fff;
+      background-color: #B8C2CC;
       font-weight: bold;
-      box-shadow: 0px 0px 10px #ddd; }
+      box-shadow: 0px 0px 10px transparent; }
       nav.nav-bar div.info div.drop-down ul {
         position: relative;
         width: 220px; }
@@ -297,16 +291,16 @@ nav.nav-bar {
             background-color: #f5f5f5;
             transition: all 0.2s ease-in-out;
             padding-left: 15px;
-            color: #040546;
-            text-shadow: 0px 0px 10px #040546; }
+            color: #F6993F;
+            text-shadow: 0px 0px 10px #F6993F; }
         nav.nav-bar div.info div.drop-down ul:after {
           position: absolute;
           content: "";
-          border: 4px solid #040546;
+          border: 4px solid #F6993F;
           border-width: 10px;
           top: -20px;
           right: 44px;
-          border-color: transparent transparent #fff transparent; }
+          border-color: transparent transparent #B8C2CC transparent; }
         nav.nav-bar div.info div.drop-down ul i {
           padding-right: 10px; }
     nav.nav-bar div.info div.cir {
@@ -315,16 +309,16 @@ nav.nav-bar {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out; }
       nav.nav-bar div.info div.cir:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       nav.nav-bar div.info div.cir img {
         width: 100%;
         height: 100%;
@@ -365,16 +359,16 @@ section.profile {
       z-index: 99; }
     section.profile div.menu-header div.menu {
       display: none;
-      background-color: #fff;
+      background-color: #DAE1E7;
       position: absolute;
       bottom: -120%;
       right: -100%;
       z-index: 999;
-      box-shadow: 0px 0px 10px #ddd;
-      -webkit-box-shadow: 0px 0px 10px #ddd;
-      -moz-box-shadow: 0px 0px 10px #ddd;
-      -ms-box-shadow: 0px 0px 10px #ddd;
-      -o-box-shadow: 0px 0px 10px #ddd; }
+      box-shadow: 0px 0px 10px transparent;
+      -webkit-box-shadow: 0px 0px 10px transparent;
+      -moz-box-shadow: 0px 0px 10px transparent;
+      -ms-box-shadow: 0px 0px 10px transparent;
+      -o-box-shadow: 0px 0px 10px transparent; }
       section.profile div.menu-header div.menu ul {
         width: 120px; }
       section.profile div.menu-header div.menu li {
@@ -386,7 +380,7 @@ section.profile {
           background-color: #ddd;
           padding-left: 13px; }
       section.profile div.menu-header div.menu .active {
-        box-shadow: 0px 0px 10px #ddd;
+        box-shadow: 0px 0px 10px transparent;
         padding-left: 13px; }
       section.profile div.menu-header div.menu li:first-of-type > i {
         color: green; }
@@ -395,23 +389,23 @@ section.profile {
       section.profile div.menu-header div.menu li:last-of-type > i {
         color: red; }
   section.profile div.myInfo {
-    background-color: #fff;
+    background-color: #B8C2CC;
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.profile div.myInfo:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.profile div.myInfo h1, section.profile div.myInfo h2, section.profile div.myInfo h3, section.profile div.myInfo h4, section.profile div.myInfo h5, section.profile div.myInfo h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -423,15 +417,15 @@ section.profile {
     section.profile div.myInfo button {
       cursor: pointer;
       border: 1px solid transparent;
-      background-color: #040546;
+      background-color: #F6993F;
       padding: 10px 30px;
       border-radius: 30px;
       transition: all 0.2s ease-in-out;
       float: right; }
       section.profile div.myInfo button:hover {
-        background-color: #fff;
-        border: 1px solid #040546;
-        color: #040546;
+        background-color: #DAE1E7;
+        border: 1px solid #F6993F;
+        color: #F6993F;
         transition: all 0.2s ease-in-out;
         box-shadow: 4px 4px 5px #ddd;
         -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -439,25 +433,25 @@ section.profile {
         -ms-box-shadow: 4px 4px 5px #ddd;
         -o-box-shadow: 4px 4px 5px #ddd; }
     section.profile div.myInfo button.follow {
-      background-color: #fff;
-      border: 1px solid #040546;
+      background-color: #DAE1E7;
+      border: 1px solid #F6993F;
       color: #32CD32; }
     section.profile div.myInfo div.img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out;
       position: absolute;
       overflow: hidden; }
       section.profile div.myInfo div.img:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       section.profile div.myInfo div.img > img {
         width: 100px;
         height: 100px;
@@ -469,22 +463,22 @@ section.profile {
       text-transform: capitalize; }
   section.profile div.row2 div.wallet {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px;
     margin-right: 8.33333%; }
     section.profile div.row2 div.wallet:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.profile div.row2 div.wallet h1, section.profile div.row2 div.wallet h2, section.profile div.row2 div.wallet h3, section.profile div.row2 div.wallet h4, section.profile div.row2 div.wallet h5, section.profile div.row2 div.wallet h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -496,16 +490,16 @@ section.profile {
     section.profile div.row2 div.wallet button {
       cursor: pointer;
       border: 1px solid transparent;
-      background-color: #040546;
+      background-color: #F6993F;
       padding: 10px 30px;
       border-radius: 30px;
       transition: all 0.2s ease-in-out;
       display: block;
       margin: auto; }
       section.profile div.row2 div.wallet button:hover {
-        background-color: #fff;
-        border: 1px solid #040546;
-        color: #040546;
+        background-color: #DAE1E7;
+        border: 1px solid #F6993F;
+        color: #F6993F;
         transition: all 0.2s ease-in-out;
         box-shadow: 4px 4px 5px #ddd;
         -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -517,48 +511,48 @@ section.profile {
       text-align: center;
       padding-top: 30px;
       font-size: 24px;
-      color: #040546; }
+      color: #F6993F; }
     section.profile div.row2 div.wallet div.cir {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out;
       display: block;
       margin: auto;
       font-size: 64px;
       padding-left: 16px;
       margin-bottom: 30px;
-      color: #040546;
+      color: #F6993F;
       transition: all 0.2s ease-in-out; }
       section.profile div.row2 div.wallet div.cir:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       section.profile div.row2 div.wallet div.cir:hover {
-        color: #040546;
+        color: #F6993F;
         transition: all 0.2s ease-in-out; }
   section.profile div.row2 div.power {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.profile div.row2 div.power:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.profile div.row2 div.power h1, section.profile div.row2 div.power h2, section.profile div.row2 div.power h3, section.profile div.row2 div.power h4, section.profile div.row2 div.power h5, section.profile div.row2 div.power h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -578,38 +572,38 @@ section.profile {
         width: 130px;
         height: 130px;
         border-radius: 50%;
-        border: 3px solid #ddd;
+        border: 3px solid transparent;
         transition: all 0.2s ease-in-out;
         padding: 25px 0px 0px 20px;
-        color: #040546; }
+        color: #F6993F; }
         section.profile div.row2 div.power div.content div.right div.cir:hover {
           transition: all 0.2s ease-in-out;
-          box-shadow: 0px 0px 10px #ddd;
-          -webkit-box-shadow: 0px 0px 10px #ddd;
-          -moz-box-shadow: 0px 0px 10px #ddd;
-          -ms-box-shadow: 0px 0px 10px #ddd;
-          -o-box-shadow: 0px 0px 10px #ddd;
-          border-color: #040546; }
+          box-shadow: 0px 0px 10px transparent;
+          -webkit-box-shadow: 0px 0px 10px transparent;
+          -moz-box-shadow: 0px 0px 10px transparent;
+          -ms-box-shadow: 0px 0px 10px transparent;
+          -o-box-shadow: 0px 0px 10px transparent;
+          border-color: #F6993F; }
     section.profile div.row2 div.power a {
-      color: #040546 !important;
+      color: #F6993F !important;
       float: right; }
   section.profile div.activity {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.profile div.activity:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.profile div.activity h1, section.profile div.activity h2, section.profile div.activity h3, section.profile div.activity h4, section.profile div.activity h5, section.profile div.activity h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -625,12 +619,12 @@ section.profile {
         cursor: pointer;
         padding-right: 10px; }
       section.profile div.activity div.controls span.active {
-        color: #040546; }
+        color: #F6993F; }
       section.profile div.activity div.controls div.after {
         content: " ";
         width: 50%;
         height: 3px;
-        background-color: #040546;
+        background-color: #F6993F;
         position: absolute;
         top: 25px;
         right: 50%;
@@ -652,14 +646,14 @@ section.profile {
         section.profile div.slide div.inner div.myWallet tr {
           border-radius: 5px;
           text-align: center;
-          background-color: #fff;
-          box-shadow: 0px 0px 5px #ddd;
+          background-color: #B8C2CC;
+          box-shadow: 0px 0px 5px transparent;
           margin-bottom: 30px !important; }
         section.profile div.slide div.inner div.session tr.head,
         section.profile div.slide div.inner div.myWallet tr.head {
           color: #b2a9c1;
           margin-bottom: 20px;
-          box-shadow: 0px 0px 0px #ddd; }
+          box-shadow: 0px 0px 0px transparent; }
         section.profile div.slide div.inner div.session table,
         section.profile div.slide div.inner div.myWallet table {
           width: 100%; }
@@ -674,25 +668,25 @@ section.profile {
                 font-weight: bolder; }
             section.profile div.slide div.inner div.session table th i,
             section.profile div.slide div.inner div.myWallet table th i {
-              color: #040546; }
+              color: #F6993F; }
   section.profile div.following {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px;
     text-align: center; }
     section.profile div.following:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.profile div.following h1, section.profile div.following h2, section.profile div.following h3, section.profile div.following h4, section.profile div.following h5, section.profile div.following h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -710,7 +704,7 @@ section.profile {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out;
       padding-top: 10px;
       margin: auto;
@@ -719,12 +713,12 @@ section.profile {
       font-family: "Abel", sans-serif; }
       section.profile div.following div.cir:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       section.profile div.following div.cir div.after, section.profile div.following div.cir div.before {
         position: absolute;
         overflow: hidden;
@@ -735,7 +729,7 @@ section.profile {
         transition: all 0.2s ease-in-out; }
       section.profile div.following div.cir div.after {
         padding-top: 31%;
-        background-color: #040546;
+        background-color: #F6993F;
         top: 0px;
         left: 0px; }
       section.profile div.following div.cir div.before {
@@ -752,7 +746,7 @@ section.profile {
         cursor: pointer;
         transition: all 0.2s ease-in-out; }
         section.profile div.following div.cir span.number:hover {
-          color: #040546;
+          color: #F6993F;
           transition: all 0.2s ease-in-out; }
     section.profile div.following div.followSec {
       position: fixed;
@@ -760,9 +754,9 @@ section.profile {
       display: none;
       z-index: 9999;
       top: 30vh;
-      background-color: #fff;
+      background-color: #DAE1E7;
       padding: 30px;
-      border: 4px double #040546; }
+      border: 4px double #F6993F; }
       section.profile div.following div.followSec i.closeP {
         color: #231;
         position: absolute;
@@ -772,7 +766,7 @@ section.profile {
         transition: all 0.2s ease-in-out;
         cursor: pointer; }
         section.profile div.following div.followSec i.closeP:hover {
-          color: #040546;
+          color: #F6993F;
           transition: all 0.2s ease-in-out; }
         section.profile div.following div.followSec i.closeP i {
           width: 100%;
@@ -783,23 +777,23 @@ section.profile {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        border: 3px solid #ddd;
+        border: 3px solid transparent;
         transition: all 0.2s ease-in-out;
         padding-top: 0px; }
         section.profile div.following div.followSec div.cir:hover {
           transition: all 0.2s ease-in-out;
-          box-shadow: 0px 0px 10px #ddd;
-          -webkit-box-shadow: 0px 0px 10px #ddd;
-          -moz-box-shadow: 0px 0px 10px #ddd;
-          -ms-box-shadow: 0px 0px 10px #ddd;
-          -o-box-shadow: 0px 0px 10px #ddd;
-          border-color: #040546; }
+          box-shadow: 0px 0px 10px transparent;
+          -webkit-box-shadow: 0px 0px 10px transparent;
+          -moz-box-shadow: 0px 0px 10px transparent;
+          -ms-box-shadow: 0px 0px 10px transparent;
+          -o-box-shadow: 0px 0px 10px transparent;
+          border-color: #F6993F; }
         section.profile div.following div.followSec div.cir img {
           width: 100%;
           height: 100%; }
       section.profile div.following div.followSec div.userInfo {
         font-family: arail;
-        color: #040546;
+        color: #F6993F;
         font-size: 18px; }
       section.profile div.following div.followSec div.controls {
         position: absolute;
@@ -813,18 +807,18 @@ section.profile {
         transition: all 0.2s ease-in-out; }
         section.profile div.following div.followSec div.controls button {
           cursor: pointer;
-          border: 1px solid #040546;
-          background-color: #fff;
-          color: #040546;
+          border: 1px solid #F6993F;
+          background-color: #DAE1E7;
+          color: #F6993F;
           padding: 10px 8px;
           border-radius: 4px;
           transition: all 0.2s ease-in-out;
           padding: 4px !important;
           box-shadow: 0px 0px 0px !important; }
           section.profile div.following div.followSec div.controls button:hover {
-            background-color: #040546;
-            color: #fff;
-            border: 1px solid #040546;
+            background-color: #F6993F;
+            color: #DAE1E7;
+            border: 1px solid #F6993F;
             transition: all 0.2s ease-in-out;
             box-shadow: 4px 4px 5px #ddd;
             -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -869,17 +863,17 @@ section.dashboard {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          border: 3px solid #ddd;
+          border: 3px solid transparent;
           transition: all 0.2s ease-in-out;
           overflow: hidden; }
           section.dashboard div.session div.session-panel div.userInfo div.cir:hover {
             transition: all 0.2s ease-in-out;
-            box-shadow: 0px 0px 10px #ddd;
-            -webkit-box-shadow: 0px 0px 10px #ddd;
-            -moz-box-shadow: 0px 0px 10px #ddd;
-            -ms-box-shadow: 0px 0px 10px #ddd;
-            -o-box-shadow: 0px 0px 10px #ddd;
-            border-color: #040546; }
+            box-shadow: 0px 0px 10px transparent;
+            -webkit-box-shadow: 0px 0px 10px transparent;
+            -moz-box-shadow: 0px 0px 10px transparent;
+            -ms-box-shadow: 0px 0px 10px transparent;
+            -o-box-shadow: 0px 0px 10px transparent;
+            border-color: #F6993F; }
           section.dashboard div.session div.session-panel div.userInfo div.cir > img {
             width: 100%;
             height: 100%; }
@@ -887,7 +881,7 @@ section.dashboard {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 3px solid #ddd;
+        border: 3px solid transparent;
         transition: all 0.2s ease-in-out;
         font-size: 24px;
         text-align: center;
@@ -898,14 +892,14 @@ section.dashboard {
         opacity: 0; }
         section.dashboard div.session div.session-panel div.enter:hover {
           transition: all 0.2s ease-in-out;
-          box-shadow: 0px 0px 10px #ddd;
-          -webkit-box-shadow: 0px 0px 10px #ddd;
-          -moz-box-shadow: 0px 0px 10px #ddd;
-          -ms-box-shadow: 0px 0px 10px #ddd;
-          -o-box-shadow: 0px 0px 10px #ddd;
-          border-color: #040546; }
+          box-shadow: 0px 0px 10px transparent;
+          -webkit-box-shadow: 0px 0px 10px transparent;
+          -moz-box-shadow: 0px 0px 10px transparent;
+          -ms-box-shadow: 0px 0px 10px transparent;
+          -o-box-shadow: 0px 0px 10px transparent;
+          border-color: #F6993F; }
       section.dashboard div.session div.session-panel div.bottom-panel {
-        background-color: #fff;
+        background-color: #DAE1E7;
         position: absolute;
         bottom: -68px;
         left: 0px;
@@ -930,21 +924,21 @@ section.dashboard {
 
 div.feedbacks {
   border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0px 0px 30px #ddd;
-  -webkit-box-shadow: 0px 0px 30px #ddd;
-  -moz-box-shadow: 0px 0px 30px #ddd;
-  -ms-box-shadow: 0px 0px 30px #ddd;
-  -o-box-shadow: 0px 0px 30px #ddd;
+  background-color: #DAE1E7;
+  box-shadow: 0px 0px 30px transparent;
+  -webkit-box-shadow: 0px 0px 30px transparent;
+  -moz-box-shadow: 0px 0px 30px transparent;
+  -ms-box-shadow: 0px 0px 30px transparent;
+  -o-box-shadow: 0px 0px 30px transparent;
   transition: all 0.2s ease-in-out;
   padding: 20px;
   margin-bottom: 30px; }
   div.feedbacks:hover {
-    box-shadow: 0px 0px 50px #ddd;
-    -webkit-box-shadow: 0px 0px 50px #ddd;
-    -moz-box-shadow: 0px 0px 50px #ddd;
-    -ms-box-shadow: 0px 0px 50px #ddd;
-    -o-box-shadow: 0px 0px 50px #ddd;
+    box-shadow: 0px 0px 50px transparent;
+    -webkit-box-shadow: 0px 0px 50px transparent;
+    -moz-box-shadow: 0px 0px 50px transparent;
+    -ms-box-shadow: 0px 0px 50px transparent;
+    -o-box-shadow: 0px 0px 50px transparent;
     transition: all 0.2s ease-in-out; }
   div.feedbacks h1, div.feedbacks h2, div.feedbacks h3, div.feedbacks h4, div.feedbacks h5, div.feedbacks h6 {
     color: rgba(0, 0, 0, 0.85);
@@ -957,19 +951,19 @@ div.feedbacks {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 3px solid #ddd;
+    border: 3px solid transparent;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
     position: relative;
     margin: auto; }
     div.feedbacks div.tbl div.cir:hover {
       transition: all 0.2s ease-in-out;
-      box-shadow: 0px 0px 10px #ddd;
-      -webkit-box-shadow: 0px 0px 10px #ddd;
-      -moz-box-shadow: 0px 0px 10px #ddd;
-      -ms-box-shadow: 0px 0px 10px #ddd;
-      -o-box-shadow: 0px 0px 10px #ddd;
-      border-color: #040546; }
+      box-shadow: 0px 0px 10px transparent;
+      -webkit-box-shadow: 0px 0px 10px transparent;
+      -moz-box-shadow: 0px 0px 10px transparent;
+      -ms-box-shadow: 0px 0px 10px transparent;
+      -o-box-shadow: 0px 0px 10px transparent;
+      border-color: #F6993F; }
     div.feedbacks div.tbl div.cir img {
       width: 100%;
       height: 100%;
@@ -977,17 +971,17 @@ div.feedbacks {
       left: 1px; }
   div.feedbacks div.tbl tr.head {
     color: #000;
-    box-shadow: 0px 0px 0px #ddd;
-    -webkit-box-shadow: 0px 0px 0px #ddd;
-    -moz-box-shadow: 0px 0px 0px #ddd;
-    -ms-box-shadow: 0px 0px 0px #ddd;
-    -o-box-shadow: 0px 0px 0px #ddd; }
+    box-shadow: 0px 0px 0px transparent;
+    -webkit-box-shadow: 0px 0px 0px transparent;
+    -moz-box-shadow: 0px 0px 0px transparent;
+    -ms-box-shadow: 0px 0px 0px transparent;
+    -o-box-shadow: 0px 0px 0px transparent; }
   div.feedbacks div.tbl tr {
-    box-shadow: 0px 0px 2px #ddd;
-    -webkit-box-shadow: 0px 0px 2px #ddd;
-    -moz-box-shadow: 0px 0px 2px #ddd;
-    -ms-box-shadow: 0px 0px 2px #ddd;
-    -o-box-shadow: 0px 0px 2px #ddd;
+    box-shadow: 0px 0px 2px transparent;
+    -webkit-box-shadow: 0px 0px 2px transparent;
+    -moz-box-shadow: 0px 0px 2px transparent;
+    -ms-box-shadow: 0px 0px 2px transparent;
+    -o-box-shadow: 0px 0px 2px transparent;
     color: #000; }
   div.feedbacks div.tbl div {
     margin-bottom: 30px; }
@@ -1016,22 +1010,22 @@ section.admin-panel {
     color: rgba(0, 0, 0, 0.85); }
   section.admin-panel div.stat {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px;
     color: #000; }
     section.admin-panel div.stat:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.admin-panel div.stat h1, section.admin-panel div.stat h2, section.admin-panel div.stat h3, section.admin-panel div.stat h4, section.admin-panel div.stat h5, section.admin-panel div.stat h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -1051,7 +1045,7 @@ section.admin-panel {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        border: 3px solid #ddd;
+        border: 3px solid transparent;
         transition: all 0.2s ease-in-out;
         text-align: center;
         padding-top: 20px;
@@ -1059,29 +1053,29 @@ section.admin-panel {
         margin: auto; }
         section.admin-panel div.stat div.con div.cir:hover {
           transition: all 0.2s ease-in-out;
-          box-shadow: 0px 0px 10px #ddd;
-          -webkit-box-shadow: 0px 0px 10px #ddd;
-          -moz-box-shadow: 0px 0px 10px #ddd;
-          -ms-box-shadow: 0px 0px 10px #ddd;
-          -o-box-shadow: 0px 0px 10px #ddd;
-          border-color: #040546; }
+          box-shadow: 0px 0px 10px transparent;
+          -webkit-box-shadow: 0px 0px 10px transparent;
+          -moz-box-shadow: 0px 0px 10px transparent;
+          -ms-box-shadow: 0px 0px 10px transparent;
+          -o-box-shadow: 0px 0px 10px transparent;
+          border-color: #F6993F; }
   section.admin-panel div.manage-user {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.admin-panel div.manage-user:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.admin-panel div.manage-user h1, section.admin-panel div.manage-user h2, section.admin-panel div.manage-user h3, section.admin-panel div.manage-user h4, section.admin-panel div.manage-user h5, section.admin-panel div.manage-user h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -1092,17 +1086,17 @@ section.admin-panel {
       padding: 8px 10px; }
     section.admin-panel div.manage-user tr.head {
       color: #000;
-      box-shadow: 0px 0px 0px #ddd;
-      -webkit-box-shadow: 0px 0px 0px #ddd;
-      -moz-box-shadow: 0px 0px 0px #ddd;
-      -ms-box-shadow: 0px 0px 0px #ddd;
-      -o-box-shadow: 0px 0px 0px #ddd; }
+      box-shadow: 0px 0px 0px transparent;
+      -webkit-box-shadow: 0px 0px 0px transparent;
+      -moz-box-shadow: 0px 0px 0px transparent;
+      -ms-box-shadow: 0px 0px 0px transparent;
+      -o-box-shadow: 0px 0px 0px transparent; }
     section.admin-panel div.manage-user tr {
-      box-shadow: 0px 0px 2px #ddd;
-      -webkit-box-shadow: 0px 0px 2px #ddd;
-      -moz-box-shadow: 0px 0px 2px #ddd;
-      -ms-box-shadow: 0px 0px 2px #ddd;
-      -o-box-shadow: 0px 0px 2px #ddd;
+      box-shadow: 0px 0px 2px transparent;
+      -webkit-box-shadow: 0px 0px 2px transparent;
+      -moz-box-shadow: 0px 0px 2px transparent;
+      -ms-box-shadow: 0px 0px 2px transparent;
+      -o-box-shadow: 0px 0px 2px transparent;
       color: #000; }
     section.admin-panel div.manage-user div {
       margin-bottom: 30px; }
@@ -1127,19 +1121,19 @@ section.admin-panel {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out;
       overflow: hidden;
       position: relative;
       margin: auto; }
       section.admin-panel div.manage-user div.cir:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       section.admin-panel div.manage-user div.cir img {
         width: 100%;
         height: 100%;
@@ -1147,16 +1141,16 @@ section.admin-panel {
         left: 1px; }
     section.admin-panel div.manage-user button {
       cursor: pointer;
-      border: 1px solid #040546;
-      background-color: #fff;
-      color: #040546;
+      border: 1px solid #F6993F;
+      background-color: #DAE1E7;
+      color: #F6993F;
       padding: 10px 8px;
       border-radius: 4px;
       transition: all 0.2s ease-in-out; }
       section.admin-panel div.manage-user button:hover {
-        background-color: #040546;
-        color: #fff;
-        border: 1px solid #040546;
+        background-color: #F6993F;
+        color: #DAE1E7;
+        border: 1px solid #F6993F;
         transition: all 0.2s ease-in-out;
         box-shadow: 4px 4px 5px #ddd;
         -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -1174,21 +1168,21 @@ section.admin-panel {
       -o-box-shadow: 0px 0px 10px #32CD32; }
   section.admin-panel div.manage-cats {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.admin-panel div.manage-cats:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.admin-panel div.manage-cats h1, section.admin-panel div.manage-cats h2, section.admin-panel div.manage-cats h3, section.admin-panel div.manage-cats h4, section.admin-panel div.manage-cats h5, section.admin-panel div.manage-cats h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -1199,17 +1193,17 @@ section.admin-panel {
       padding: 8px 10px; }
     section.admin-panel div.manage-cats tr.head {
       color: #000;
-      box-shadow: 0px 0px 0px #ddd;
-      -webkit-box-shadow: 0px 0px 0px #ddd;
-      -moz-box-shadow: 0px 0px 0px #ddd;
-      -ms-box-shadow: 0px 0px 0px #ddd;
-      -o-box-shadow: 0px 0px 0px #ddd; }
+      box-shadow: 0px 0px 0px transparent;
+      -webkit-box-shadow: 0px 0px 0px transparent;
+      -moz-box-shadow: 0px 0px 0px transparent;
+      -ms-box-shadow: 0px 0px 0px transparent;
+      -o-box-shadow: 0px 0px 0px transparent; }
     section.admin-panel div.manage-cats tr {
-      box-shadow: 0px 0px 2px #ddd;
-      -webkit-box-shadow: 0px 0px 2px #ddd;
-      -moz-box-shadow: 0px 0px 2px #ddd;
-      -ms-box-shadow: 0px 0px 2px #ddd;
-      -o-box-shadow: 0px 0px 2px #ddd;
+      box-shadow: 0px 0px 2px transparent;
+      -webkit-box-shadow: 0px 0px 2px transparent;
+      -moz-box-shadow: 0px 0px 2px transparent;
+      -ms-box-shadow: 0px 0px 2px transparent;
+      -o-box-shadow: 0px 0px 2px transparent;
       color: #000; }
     section.admin-panel div.manage-cats div {
       margin-bottom: 30px; }
@@ -1236,7 +1230,7 @@ section.admin-panel {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      border: 3px solid #ddd;
+      border: 3px solid transparent;
       transition: all 0.2s ease-in-out;
       overflow: hidden;
       position: relative;
@@ -1244,12 +1238,12 @@ section.admin-panel {
       font-size: 28px; }
       section.admin-panel div.manage-cats div.cir:hover {
         transition: all 0.2s ease-in-out;
-        box-shadow: 0px 0px 10px #ddd;
-        -webkit-box-shadow: 0px 0px 10px #ddd;
-        -moz-box-shadow: 0px 0px 10px #ddd;
-        -ms-box-shadow: 0px 0px 10px #ddd;
-        -o-box-shadow: 0px 0px 10px #ddd;
-        border-color: #040546; }
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #F6993F; }
       section.admin-panel div.manage-cats div.cir img {
         width: 100%;
         height: 100%;
@@ -1257,16 +1251,16 @@ section.admin-panel {
         left: 1px; }
     section.admin-panel div.manage-cats button {
       cursor: pointer;
-      border: 1px solid #040546;
-      background-color: #fff;
-      color: #040546;
+      border: 1px solid #F6993F;
+      background-color: #DAE1E7;
+      color: #F6993F;
       padding: 10px 8px;
       border-radius: 4px;
       transition: all 0.2s ease-in-out; }
       section.admin-panel div.manage-cats button:hover {
-        background-color: #040546;
-        color: #fff;
-        border: 1px solid #040546;
+        background-color: #F6993F;
+        color: #DAE1E7;
+        border: 1px solid #F6993F;
         transition: all 0.2s ease-in-out;
         box-shadow: 4px 4px 5px #ddd;
         -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -1277,21 +1271,21 @@ section.admin-panel {
       background-color: #ff2323; }
   section.admin-panel div.manage-session {
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px #ddd;
-    -webkit-box-shadow: 0px 0px 30px #ddd;
-    -moz-box-shadow: 0px 0px 30px #ddd;
-    -ms-box-shadow: 0px 0px 30px #ddd;
-    -o-box-shadow: 0px 0px 30px #ddd;
+    background-color: #DAE1E7;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
     transition: all 0.2s ease-in-out;
     padding: 20px;
     margin-bottom: 30px; }
     section.admin-panel div.manage-session:hover {
-      box-shadow: 0px 0px 50px #ddd;
-      -webkit-box-shadow: 0px 0px 50px #ddd;
-      -moz-box-shadow: 0px 0px 50px #ddd;
-      -ms-box-shadow: 0px 0px 50px #ddd;
-      -o-box-shadow: 0px 0px 50px #ddd;
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
       transition: all 0.2s ease-in-out; }
     section.admin-panel div.manage-session h1, section.admin-panel div.manage-session h2, section.admin-panel div.manage-session h3, section.admin-panel div.manage-session h4, section.admin-panel div.manage-session h5, section.admin-panel div.manage-session h6 {
       color: rgba(0, 0, 0, 0.85);
@@ -1302,17 +1296,17 @@ section.admin-panel {
       padding: 8px 10px; }
     section.admin-panel div.manage-session tr.head {
       color: #000;
-      box-shadow: 0px 0px 0px #ddd;
-      -webkit-box-shadow: 0px 0px 0px #ddd;
-      -moz-box-shadow: 0px 0px 0px #ddd;
-      -ms-box-shadow: 0px 0px 0px #ddd;
-      -o-box-shadow: 0px 0px 0px #ddd; }
+      box-shadow: 0px 0px 0px transparent;
+      -webkit-box-shadow: 0px 0px 0px transparent;
+      -moz-box-shadow: 0px 0px 0px transparent;
+      -ms-box-shadow: 0px 0px 0px transparent;
+      -o-box-shadow: 0px 0px 0px transparent; }
     section.admin-panel div.manage-session tr {
-      box-shadow: 0px 0px 2px #ddd;
-      -webkit-box-shadow: 0px 0px 2px #ddd;
-      -moz-box-shadow: 0px 0px 2px #ddd;
-      -ms-box-shadow: 0px 0px 2px #ddd;
-      -o-box-shadow: 0px 0px 2px #ddd;
+      box-shadow: 0px 0px 2px transparent;
+      -webkit-box-shadow: 0px 0px 2px transparent;
+      -moz-box-shadow: 0px 0px 2px transparent;
+      -ms-box-shadow: 0px 0px 2px transparent;
+      -o-box-shadow: 0px 0px 2px transparent;
       color: #000; }
     section.admin-panel div.manage-session div {
       margin-bottom: 30px; }
@@ -1338,16 +1332,16 @@ section.admin-panel {
       margin-bottom: 20px; }
     section.admin-panel div.manage-session button {
       cursor: pointer;
-      border: 1px solid #040546;
-      background-color: #fff;
-      color: #040546;
+      border: 1px solid #F6993F;
+      background-color: #DAE1E7;
+      color: #F6993F;
       padding: 10px 8px;
       border-radius: 4px;
       transition: all 0.2s ease-in-out; }
       section.admin-panel div.manage-session button:hover {
-        background-color: #040546;
-        color: #fff;
-        border: 1px solid #040546;
+        background-color: #F6993F;
+        color: #DAE1E7;
+        border: 1px solid #F6993F;
         transition: all 0.2s ease-in-out;
         box-shadow: 4px 4px 5px #ddd;
         -webkit-box-shadow: 4px 4px 5px #ddd;
@@ -1387,7 +1381,7 @@ section.admin-panel {
     cursor: pointer;
     transition: all 0.2s ease-in-out; }
     .overlay .exit-icon:hover {
-      color: #040546;
+      color: #F6993F;
       transition: all 0.2s ease-in-out; }
 
 * {
@@ -1404,7 +1398,7 @@ div.noti-suc {
   right: -100%;
   top: 22vh;
   padding: 10px;
-  background-color: #040546;
+  background-color: #F6993F;
   color: #fff;
   z-index: 99999; }
 
@@ -1418,7 +1412,7 @@ input {
   outline: medium none currentcolor; }
 
 body {
-  background-color: #fff;
+  background-color: #B8C2CC;
   width: 104%;
   overflow-x: hidden; }
 
@@ -1435,45 +1429,45 @@ div.drob-down div.contain {
   position: relative; }
 div.drob-down span.title {
   font-weight: bolder;
-  background-color: #fff;
+  background-color: #B8C2CC;
   color: #000;
-  border: 1px solid #040546;
+  border: 1px solid #F6993F;
   padding: 10px 30px;
   display: block;
   cursor: pointer;
   transition: all 0.2s ease-in-out; }
   div.drob-down span.title:hover {
-    background-color: #040546;
+    background-color: #F6993F;
     transition: all 0.2s ease-in-out;
     color: #fff;
     border-color: transparent;
-    box-shadow: 0px 0px 10px #040546;
-    -webkit-box-shadow: 0px 0px 10px #040546;
-    -moz-box-shadow: 0px 0px 10px #040546;
-    -ms-box-shadow: 0px 0px 10px #040546;
-    -o-box-shadow: 0px 0px 10px #040546; }
+    box-shadow: 0px 0px 10px #F6993F;
+    -webkit-box-shadow: 0px 0px 10px #F6993F;
+    -moz-box-shadow: 0px 0px 10px #F6993F;
+    -ms-box-shadow: 0px 0px 10px #F6993F;
+    -o-box-shadow: 0px 0px 10px #F6993F; }
   div.drob-down span.title:active {
     color: #f0f;
     transition: all 0.2s ease-in-out; }
 div.drob-down ul {
-  box-shadow: 0px 0px 1px #040546;
-  -webkit-box-shadow: 0px 0px 1px #040546;
-  -moz-box-shadow: 0px 0px 1px #040546;
-  -ms-box-shadow: 0px 0px 1px #040546;
-  -o-box-shadow: 0px 0px 1px #040546;
+  box-shadow: 0px 0px 1px #F6993F;
+  -webkit-box-shadow: 0px 0px 1px #F6993F;
+  -moz-box-shadow: 0px 0px 1px #F6993F;
+  -ms-box-shadow: 0px 0px 1px #F6993F;
+  -o-box-shadow: 0px 0px 1px #F6993F;
   position: absolute;
   z-index: 999;
   left: 0px;
   top: 45px;
   width: 138px; }
 div.drob-down ul li {
-  background-color: #fff;
+  background-color: #B8C2CC;
   padding: 10px 30px;
   cursor: pointer;
   transition: all 0.2s ease-in-out; }
   div.drob-down ul li:hover {
-    background-color: #040546;
-    color: #fff;
+    background-color: #F6993F;
+    color: #B8C2CC;
     transition: all 0.2s ease-in-out; }
 
 .hidden {
@@ -1496,17 +1490,17 @@ div.switch {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 1px 1px 10px #000;
-  -webkit-box-shadow: 1px 1px 10px #000;
-  -moz-box-shadow: 1px 1px 10px #000;
-  -ms-box-shadow: 1px 1px 10px #000;
-  -o-box-shadow: 1px 1px 10px #000; }
+  box-shadow: 1px 1px 10px transparent;
+  -webkit-box-shadow: 1px 1px 10px transparent;
+  -moz-box-shadow: 1px 1px 10px transparent;
+  -ms-box-shadow: 1px 1px 10px transparent;
+  -o-box-shadow: 1px 1px 10px transparent; }
   div.switch:hover {
-    box-shadow: 10px 10px 10px #ddd;
-    -webkit-box-shadow: 10px 10px 10px #ddd;
-    -moz-box-shadow: 10px 10px 10px #ddd;
-    -ms-box-shadow: 10px 10px 10px #ddd;
-    -o-box-shadow: 10px 10px 10px #ddd; }
+    box-shadow: 10px 10px 10px transparent;
+    -webkit-box-shadow: 10px 10px 10px transparent;
+    -moz-box-shadow: 10px 10px 10px transparent;
+    -ms-box-shadow: 10px 10px 10px transparent;
+    -o-box-shadow: 10px 10px 10px transparent; }
   div.switch .sig {
     width: 300px;
     position: absolute; }
@@ -1515,7 +1509,7 @@ div.switch {
     height: 30px;
     float: left; }
   div.switch .on {
-    background-color: #040546;
+    background-color: #F6993F;
     padding-left: 10px; }
   div.switch .off {
     background-color: #ff2323;
@@ -1537,13 +1531,13 @@ div.switch {
 .rotate-180 {
   transition: all 0.2s ease-in-out;
   transform: rotate(180deg);
-  color: #040546;
+  color: #F6993F;
   transform-origin: center; }
 
 span.qur,
 div.qur {
   padding: 10px;
-  background-color: #040546;
+  background-color: #F6993F;
   color: #fff;
   float: left;
   display: block;
@@ -1593,4 +1587,4 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-/*# sourceMappingURL=frontEnd.css.map */
+/*# sourceMappingURL=frontEnd3.css.map */
