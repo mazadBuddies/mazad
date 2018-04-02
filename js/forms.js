@@ -178,7 +178,7 @@ function makeInsertArray(array, dataForm){
     //console.debug(dataForm);
     return dataForm;
 }
-
+/* zzzz */
 function ajaxFileSubmit(e){
     "use strict";
     e.preventDefault();
@@ -186,7 +186,6 @@ function ajaxFileSubmit(e){
     var formData = $(this).serializeArray();
     var method   = $(this).data('method');
     var accept   = String($(this).data('accept'));
-    console.log(sucFunc);
     formData = makeInsertArray(formData, new FormData());
     formData.append("ACTION", $(this).data('action'));
     uploadeFile("images", "images", url, formData, function (data){
@@ -207,11 +206,46 @@ function ajaxFileSubmit(e){
     });// end of accept action function
 }// end of function
 
-//$("form#mkSession").on("submit", ajaxFileSubmit);
-//$(".ajax ").on("submit", ajaxSubmit);
+
+function ajaxSubmit(e){
+    e.preventDefault();
+    var url = $(this).data("url");
+    var formData = $(this).serializeArray();
+    var method   = $(this).data('method');
+    var accept   = String($(this).data('accept'));
+    if($(this).data('values') != undefined){
+        var dataAsString = $(this).data('values');
+        var splitedArrayOfDataValue = dataAsString.split('|');
+    }
+    formData = makeInsertArray(formData, new FormData());
+    formData.append("ACTION", $(this).data('action'));
+    for(var i = 0; i < splitedArrayOfDataValue.length; i++){
+        var currentIndexKeyValue = splitedArrayOfDataValue[i].split("=>");
+        formData.append(currentIndexKeyValue[0],currentIndexKeyValue[1]);
+    }
+    $.ajax({
+        url: url,
+        method: method,
+        data: formData,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(data){
+            alert(data);
+        },
+        error: function(data){
+            console.log("error");
+            console.log(data);
+        }
+    });
+    
+}
+
+$(".ajax.click").on("click", ajaxSubmit);
 $(".ajax_file.submit").on("submit", ajaxFileSubmit);
+$(".ajax.submit").on("submit", ajaxSubmit);
 
-
+/*
 function printLogo(){
     "use strict"
     console.log("*      * **** ****** **** * *             \n");
@@ -221,3 +255,4 @@ function printLogo(){
     console.log("*      * *  * ****** *  * * *        \n");
 }
 printLogo();
+*/
