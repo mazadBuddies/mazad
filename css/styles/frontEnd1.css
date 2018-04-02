@@ -1,22 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2018, 9:00:21 PM
-    Author     : boodey
-*/
-/*
-$main-color: #ff2323;
-$sec-color :  #282828;
-$def:rgba(11,11,11,0.9);
-$font-color : #fff;
-*/
-/*start of heading color*/
-/*end of heading color*/
-/*start of global colors*/
-/*end of global colors*/
 /*start of font size*/
 /*end of font size*/
 /*
@@ -33,6 +14,19 @@ $icon-color:#5F6366;
 $icon-background:#393D43;
 $main : #F70083;
  
+*/
+/*start of heading color*/
+/*end of heading color*/
+/*start of global colors*/
+/*end of global colors*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2018, 9:00:21 PM
+    Author     : boodey
 */
 a {
   color: #ff2323; }
@@ -1593,4 +1587,4 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-/*# sourceMappingURL=frontEnd.css.map */
+/*# sourceMappingURL=frontEnd1.css.map */

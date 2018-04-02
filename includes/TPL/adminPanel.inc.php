@@ -1,6 +1,6 @@
 <section class="admin-panel col-11">
         <div class="container-fluid">
-            <h2 class="makeOverLay">Admin Panel</h2>
+            <h2 class="head">Admin Panel</h2>
             <div class="stat">
                 <h3>Statistics</h3>
                 <div class="con">

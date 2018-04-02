@@ -20,6 +20,10 @@ test test test
 */
 
 
+
+
+
+
 $mashKind = "linux";// linux
 ini_set('display_errors', 1);//this for show errs
 error_reporting(~0);// the same target
@@ -50,4 +54,3 @@ define("DB_USER", "root"); // user name of database
 define("DB_PASS", $dataBasePassword); // password of data base
 /* END OF DEFINES */
 //include_once CLASS_DIR . "autoLoader.class.php";
-
