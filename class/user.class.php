@@ -73,6 +73,15 @@ class user{
             $this->createdSessions = $_SESSION['createdSessions'];
         }
 
+        public function getFullName(){
+            $con = new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
+            $con->setTable('user');
+            $data = $con->select("firstName , lastName ", array('id'), array($_SESSION['id']));
+            if((int)sizeof($data) > 0){
+                return $data[0]['firstName'] . " " . $data[0]['lastName'];
+            }
+
+        }
         public function logOut(){
             
             session_unset(); 
@@ -153,4 +162,3 @@ class user{
     }//end of getImage
     }
 
-$masterUser = new user("","");

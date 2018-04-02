@@ -29,7 +29,10 @@
                             <!--acive here-->
                         </div>
                     </div>
-                    <span class="name">BODEY SOLIEMAN</span>
+                    <span class="name"><?php  
+                    $master = new user();
+                    echo $master->getFullName();
+                    ?></span>
                     <div class="row">
                         <table class="col-6">
                                 <tr>

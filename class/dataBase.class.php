@@ -329,9 +329,14 @@
                 }//end of loop function
             }//end of edit function
     }//end of class data base
-
-
-
+/*
+$con = new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
+$con->setTable('user');
+//$con->update(array("firstName"), array("shrouk2"), array("email"),array("shrouk@gmail.com"));
+$con->delete(array("id"),array("4"));
+$data = $con->select("firstName");
+var_dump($data);
+*/
 //$test->insert(array("icon","sessionName", "numOfSession", "details"),array("fa-car", "cars", 5, "testtest"));
     
     
