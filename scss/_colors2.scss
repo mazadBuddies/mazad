@@ -2,7 +2,7 @@
 $font-color : #000;
 $font-color2: #fff;
 //start colors of theme 2
-$main-color: #ff2323;
+$main-color: /*#9561E2*/#ff2323;
 $sec-color :  #282828;
 $def:rgba(11,11,11,0.9);
 $font-color : #fff;
@@ -20,3 +20,7 @@ $shadow-color: transparent;//theme1
 $sec-shadow-color: transparent;
 /*end of global colors*/
 $overlay-color: rgba(0,0,0,0.6);
+
+.head{
+    color:$heading-color!important;
+}
