@@ -1,0 +1,129 @@
+/*
+    ************** this file include session style ****** ***********
+    *           this V.1.1.1 of mazad website at 3 abr 2018         *
+    *          this file contains style session at all style        *
+    *****************************************************************
+*/
+
+section.session-all{
+    margin: auto;
+    div.sessionConnect{
+        div.sessionOffers{
+            height: 70vh;
+            margin-right: 8.333333333%;
+            @include box-style(1);
+            div.cir{
+                margin: auto;
+                @include cir(50px);
+                overflow: hidden;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }// end of img
+            }//end of div.cir
+            table{
+                @include tbl();
+            }
+            div.scroll{
+                margin: auto;
+                padding-left: 10px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                height: 340px;
+            }
+        }//end of session offer
+        div.setOffer{
+            div.offerInput.mrg-input{
+                width: 38%!important;
+                @include mrg-botton();
+                right: 10px;
+            }
+        }
+        div.sessionBroadCast{
+            position: relative;
+            @include box-style(1);
+            div.mrg-input{
+                @include mrg-botton();
+            }//end of mrg-input
+            div.messages{
+                margin: auto;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                height: 380px;
+                padding: 0px 0px 0px 22px;
+                div.message{
+                    margin-bottom: 20px;
+                }
+                div.message.me{
+                    div.message-text{
+                        background-color: #ddd;
+                        color: #fff;
+                        padding: 10px;
+                        width: 75%;
+                        float: left;
+                        margin-right: 10px;
+                        position: relative;
+                        border-radius: 10px 0px 0px 10px;
+                        &:after{
+                            position: absolute;
+                            content:"";
+                            right: -23px;
+                            top: 10px;
+                            border: 12px solid #000;
+                            border-color: transparent transparent transparent #ddd;
+                        }
+                    }// end of div message-text
+                }//end of message me
+                div.message.other{
+                    div.message-text{
+                        background-color: $main-color;
+                        color: #fff;
+                        padding: 10px;
+                        width: 75%;
+                        float: left;
+                        margin-right: 30px;
+                        position: relative;
+                        border-radius: 0px 10px 10px 0px;
+                        &:after{
+                            position: absolute;
+                            content:"";
+                            top: 10px;
+                            left: -23px;
+                            border: 12px solid #000;
+                            border-color: transparent $main-color transparent  transparent ;
+                        }
+                    }// end of div message-text
+                    div.cir{
+                        float: left;
+                        margin-right: 10px;
+                    }
+                }
+                div.cir{
+                    overflow: hidden;
+                    @include cir(50px);
+                    cursor: pointer;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        filter: grayscale(1);
+                        @include smooth();
+                        &:hover{
+                            filter: grayscale(0);
+                            @include smooth();
+                        }
+                    }// end of img
+                }//end of cir
+            }//end of messages
+        }//end of sessionBroadCast
+    }// end of session connect
+    div.cir2{
+        @include cir(50px);
+        margin: auto;
+        cursor: pointer;
+        padding-top: 6px;
+        font-size: $font-lg;
+        text-align: center;
+        margin-bottom: 10px;
+        color:$font-color;
+    }
+}// end of section session all

@@ -7,7 +7,6 @@
 */
     ini_set('display_errors', 1);//this for show errs
     error_reporting(~0);// the same target
-
     class dataBase{
         /* start of props */
         private $dsn;// this var to define data source name
@@ -61,6 +60,13 @@
             $fin = $this->mkInsertArray($whereIn, $whereEq); //set values in [key => value] array to execute it
             if($get){return $this->executeQuery(false, true, $fin);}//if we pass parameter get true => return data
         }//end of mkQuery
+// XXXXXXXXXXXXXXXXXXXXXXX
+        public function selectWithOperator($select = "*", $whereIn = array(), $operators = array(),$whereEq = array()){
+            $where = $this->whereFormatWithOperators($whereIn, $operators);// set where query as string to mk new sql
+            $this->curQuery = "SELECT $select FROM $this->curTable WHERE $where"; // set current query fo select syntax
+            $fin = $this->mkInsertArray($whereIn, $whereEq); //set values in [key => value] array to execute it
+            return $this->executeQuery(false, true, $fin);
+        }
 
         public function executeQuery($getCount = false, $get = false, $data = array()){
             try{
@@ -100,6 +106,15 @@
             $str = '';
             for($i = 0 ; $i<(int)sizeof($whereArr); $i++)
                 $str .= $whereArr[$i] . ' = :' . $whereArr[$i] . $seb . ' ';// make string as where format
+            $str = chop($str, $seb);// remove last sep.
+            return $str;// return gen. str
+        }// end of whereFormat function
+
+        public function whereFormatWithOperators($whereArr, $operators = array(), $seb = ' AND'){
+            if((int)sizeof($whereArr) == 0)return '1';//if no condition (Array is Empty) return 1 "No Condition set"
+            $str = '';
+            for($i = 0 ; $i<(int)sizeof($whereArr); $i++)
+                $str .= $whereArr[$i] . $operators[$i] .' :' . $whereArr[$i] . $seb . ' ';// make string as where format
             $str = chop($str, $seb);// remove last sep.
             return $str;// return gen. str
         }// end of whereFormat function
@@ -329,6 +344,11 @@
                 }//end of loop function
             }//end of edit function
     }//end of class data base
+/*
+    $createProjectDataBase = new dataBase("localhost", "mazad", "root", "1234A");
+    $createProjectDataBase->setTable('user');
+    print_r($createProjectDataBase->selectWithOperator("firstName, id", array('id'), array('>='), array(3)));
+    */
 /*
 $con = new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
 $con->setTable('user');

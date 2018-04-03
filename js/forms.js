@@ -207,21 +207,25 @@ function ajaxFileSubmit(e){
 }// end of function
 
 
+var ajaxSuccessFunctions = [addedNewOfferSuc];
 function ajaxSubmit(e){
     e.preventDefault();
     var url = $(this).data("url");
     var formData = $(this).serializeArray();
     var method   = $(this).data('method');
     var accept   = String($(this).data('accept'));
+    mkOfferValue();
     if($(this).data('values') != undefined){
         var dataAsString = $(this).data('values');
         var splitedArrayOfDataValue = dataAsString.split('|');
     }
     formData = makeInsertArray(formData, new FormData());
     formData.append("ACTION", $(this).data('action'));
-    for(var i = 0; i < splitedArrayOfDataValue.length; i++){
-        var currentIndexKeyValue = splitedArrayOfDataValue[i].split("=>");
-        formData.append(currentIndexKeyValue[0],currentIndexKeyValue[1]);
+    if($(this).data('values') != undefined){
+        for(var i = 0; i < splitedArrayOfDataValue.length; i++){
+            var currentIndexKeyValue = splitedArrayOfDataValue[i].split("=>");
+            formData.append(currentIndexKeyValue[0],currentIndexKeyValue[1]);
+        }
     }
     $.ajax({
         url: url,
@@ -231,19 +235,20 @@ function ajaxSubmit(e){
         cache: false,
         processData: false,
         success: function(data){
-            alert(data);
+            //ajaxSuccessFunctions[0](data);
         },
         error: function(data){
             console.log("error");
-            console.log(data);
+            alert(data);
         }
     });
-    
 }
 
 $(".ajax.click").on("click", ajaxSubmit);
 $(".ajax_file.submit").on("submit", ajaxFileSubmit);
 $(".ajax.submit").on("submit", ajaxSubmit);
+
+//var interval = setInterval(good, 1000);
 
 /*
 function printLogo(){

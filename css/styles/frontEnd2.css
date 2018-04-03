@@ -659,6 +659,9 @@ section.profile {
           color: #b2a9c1;
           margin-bottom: 20px;
           box-shadow: 0px 0px 0px transparent; }
+        section.profile div.slide div.inner div.session th,
+        section.profile div.slide div.inner div.myWallet th {
+          color: #b2a9c1; }
         section.profile div.slide div.inner div.session table,
         section.profile div.slide div.inner div.myWallet table {
           width: 100%; }
@@ -1365,7 +1368,7 @@ section.admin-panel {
   position: absolute;
   width: 100vw;
   height: 200vh;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   overflow: scroll;
   top: 0px;
   left: 0px;
@@ -1388,6 +1391,239 @@ section.admin-panel {
     .overlay .exit-icon:hover {
       color: #ff2323;
       transition: all 0.2s ease-in-out; }
+
+/*
+    ************** this file include session style ****** ***********
+    *           this V.1.1.1 of mazad website at 3 abr 2018         *
+    *          this file contains style session at all style        *
+    *****************************************************************
+*/
+section.session-all {
+  margin: auto; }
+  section.session-all div.sessionConnect div.sessionOffers {
+    height: 70vh;
+    margin-right: 8.333333333%;
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.session-all div.sessionConnect div.sessionOffers:hover {
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
+      transition: all 0.2s ease-in-out; }
+    section.session-all div.sessionConnect div.sessionOffers h1, section.session-all div.sessionConnect div.sessionOffers h2, section.session-all div.sessionConnect div.sessionOffers h3, section.session-all div.sessionConnect div.sessionOffers h4, section.session-all div.sessionConnect div.sessionOffers h5, section.session-all div.sessionConnect div.sessionOffers h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.session-all div.sessionConnect div.sessionOffers table th {
+      padding: 8px 10px; }
+    section.session-all div.sessionConnect div.sessionOffers div.cir {
+      margin: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      transition: all 0.2s ease-in-out;
+      overflow: hidden; }
+      section.session-all div.sessionConnect div.sessionOffers div.cir:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px transparent;
+        -webkit-box-shadow: 0px 0px 10px transparent;
+        -moz-box-shadow: 0px 0px 10px transparent;
+        -ms-box-shadow: 0px 0px 10px transparent;
+        -o-box-shadow: 0px 0px 10px transparent;
+        border-color: #ff2323; }
+      section.session-all div.sessionConnect div.sessionOffers div.cir img {
+        width: 50px;
+        height: 50px; }
+    section.session-all div.sessionConnect div.sessionOffers table tr {
+      border-radius: 5px;
+      text-align: center;
+      background-color: rgba(11, 11, 11, 0.9);
+      box-shadow: 0px 0px 5px transparent;
+      margin-bottom: 30px !important; }
+    section.session-all div.sessionConnect div.sessionOffers table tr.head {
+      color: #b2a9c1;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 0px transparent; }
+    section.session-all div.sessionConnect div.sessionOffers table th {
+      color: #b2a9c1; }
+    section.session-all div.sessionConnect div.sessionOffers div.scroll {
+      margin: auto;
+      padding-left: 10px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 340px; }
+  section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input {
+    width: 38% !important;
+    width: 94%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
+    section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input input {
+      padding: 10px;
+      width: 80%; }
+    section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input button,
+    section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input .myBtn {
+      width: 18%;
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      border: 0px;
+      background: linear-gradient(-90deg, #ff2323, #282828);
+      border-radius: 0px 10px 10px 0px;
+      padding: 10px;
+      transition: all 0.2s ease-in-out; }
+      section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input button:hover,
+      section.session-all div.sessionConnect div.setOffer div.offerInput.mrg-input .myBtn:hover {
+        background-color: #ff2323;
+        transition: all 0.2s ease-in-out; }
+  section.session-all div.sessionConnect div.sessionBroadCast {
+    position: relative;
+    border-radius: 4px;
+    background-color: #282828;
+    box-shadow: 0px 0px 30px transparent;
+    -webkit-box-shadow: 0px 0px 30px transparent;
+    -moz-box-shadow: 0px 0px 30px transparent;
+    -ms-box-shadow: 0px 0px 30px transparent;
+    -o-box-shadow: 0px 0px 30px transparent;
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+    margin-bottom: 30px; }
+    section.session-all div.sessionConnect div.sessionBroadCast:hover {
+      box-shadow: 0px 0px 50px transparent;
+      -webkit-box-shadow: 0px 0px 50px transparent;
+      -moz-box-shadow: 0px 0px 50px transparent;
+      -ms-box-shadow: 0px 0px 50px transparent;
+      -o-box-shadow: 0px 0px 50px transparent;
+      transition: all 0.2s ease-in-out; }
+    section.session-all div.sessionConnect div.sessionBroadCast h1, section.session-all div.sessionConnect div.sessionBroadCast h2, section.session-all div.sessionConnect div.sessionBroadCast h3, section.session-all div.sessionConnect div.sessionBroadCast h4, section.session-all div.sessionConnect div.sessionBroadCast h5, section.session-all div.sessionConnect div.sessionBroadCast h6 {
+      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 34px;
+      font-family: "Krona One", sans-serif; }
+    section.session-all div.sessionConnect div.sessionBroadCast table th {
+      padding: 8px 10px; }
+    section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input {
+      width: 94%;
+      position: absolute;
+      bottom: 10px; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input input {
+        padding: 10px;
+        width: 80%; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input button,
+      section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input .myBtn {
+        width: 18%;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: 0px;
+        background: linear-gradient(-90deg, #ff2323, #282828);
+        border-radius: 0px 10px 10px 0px;
+        padding: 10px;
+        transition: all 0.2s ease-in-out; }
+        section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input button:hover,
+        section.session-all div.sessionConnect div.sessionBroadCast div.mrg-input .myBtn:hover {
+          background-color: #ff2323;
+          transition: all 0.2s ease-in-out; }
+    section.session-all div.sessionConnect div.sessionBroadCast div.messages {
+      margin: auto;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 380px;
+      padding: 0px 0px 0px 22px; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message {
+        margin-bottom: 20px; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message.me div.message-text {
+        background-color: #ddd;
+        color: #fff;
+        padding: 10px;
+        width: 75%;
+        float: left;
+        margin-right: 10px;
+        position: relative;
+        border-radius: 10px 0px 0px 10px; }
+        section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message.me div.message-text:after {
+          position: absolute;
+          content: "";
+          right: -23px;
+          top: 10px;
+          border: 12px solid #000;
+          border-color: transparent transparent transparent #ddd; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message.other div.message-text {
+        background-color: #ff2323;
+        color: #fff;
+        padding: 10px;
+        width: 75%;
+        float: left;
+        margin-right: 30px;
+        position: relative;
+        border-radius: 0px 10px 10px 0px; }
+        section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message.other div.message-text:after {
+          position: absolute;
+          content: "";
+          top: 10px;
+          left: -23px;
+          border: 12px solid #000;
+          border-color: transparent #ff2323 transparent transparent; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.messages div.message.other div.cir {
+        float: left;
+        margin-right: 10px; }
+      section.session-all div.sessionConnect div.sessionBroadCast div.messages div.cir {
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer; }
+        section.session-all div.sessionConnect div.sessionBroadCast div.messages div.cir:hover {
+          transition: all 0.2s ease-in-out;
+          box-shadow: 0px 0px 10px transparent;
+          -webkit-box-shadow: 0px 0px 10px transparent;
+          -moz-box-shadow: 0px 0px 10px transparent;
+          -ms-box-shadow: 0px 0px 10px transparent;
+          -o-box-shadow: 0px 0px 10px transparent;
+          border-color: #ff2323; }
+        section.session-all div.sessionConnect div.sessionBroadCast div.messages div.cir img {
+          width: 50px;
+          height: 50px;
+          filter: grayscale(1);
+          transition: all 0.2s ease-in-out; }
+          section.session-all div.sessionConnect div.sessionBroadCast div.messages div.cir img:hover {
+            filter: grayscale(0);
+            transition: all 0.2s ease-in-out; }
+  section.session-all div.cir2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+    margin: auto;
+    cursor: pointer;
+    padding-top: 6px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff; }
+    section.session-all div.cir2:hover {
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0px 0px 10px transparent;
+      -webkit-box-shadow: 0px 0px 10px transparent;
+      -moz-box-shadow: 0px 0px 10px transparent;
+      -ms-box-shadow: 0px 0px 10px transparent;
+      -o-box-shadow: 0px 0px 10px transparent;
+      border-color: #ff2323; }
 
 * {
   margin: 0px;

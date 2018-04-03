@@ -158,7 +158,7 @@ $(document).on("keydown", function(e){
     if(e.shiftKey  && e.which == 65){
         OpenAdmin();
     }
-    console.log(e.which);
+    //console.log(e.which);
 });
 
 // start of append switch content to assig css
