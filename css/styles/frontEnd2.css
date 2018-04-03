@@ -58,10 +58,10 @@ a {
   src: local("Abel Regular"), local("Abel-Regular"), url(../fonts/MwQ5bhbm2POE2V9BPQ.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 div.form {
+  margin: auto;
   width: 100%;
   border-radius: 0px 0px 7px 7px;
-  margin: auto;
-  margin-bottom: 100px; }
+  background-color: rgba(11, 11, 11, 0.9); }
   div.form div.myCon {
     width: 90%;
     margin: auto; }
@@ -140,18 +140,20 @@ section.body {
   background-size: cover;
   padding-top: 20vh; }
 
-div.login input[type='submit'] {
-  margin: 30px auto !important; }
-div.login form {
-  padding-bottom: 10px; }
-div.login span.dir-signUp {
-  display: block;
-  text-align: center;
-  color: #fff; }
-  div.login span.dir-signUp > a {
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px; }
+div.login {
+  margin: auto; }
+  div.login input[type='submit'] {
+    margin: 30px auto !important; }
+  div.login form {
+    padding-bottom: 10px; }
+  div.login span.dir-signUp {
+    display: block;
+    text-align: center;
+    color: #fff; }
+    div.login span.dir-signUp > a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px; }
 
 /*start of aside style*/
 aside.left-side {
@@ -1363,7 +1365,7 @@ section.admin-panel {
   position: absolute;
   width: 100vw;
   height: 200vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: white;
   overflow: scroll;
   top: 0px;
   left: 0px;

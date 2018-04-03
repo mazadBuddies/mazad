@@ -79,8 +79,7 @@ for(var i = 0; i< numOfStars ; i++){
 $("section.content").children().css(({"display":"none", "opacity":"0"}));
 $("section."+$("li.side").data("dir")).css({"display":"block"}).animate({"opacity":"1"});
 
-
-$("aside.left-side ul li").on("click", function(){
+function changeLink(){
     "use strict";
     if($(this).data("on") == true)
     {
@@ -90,7 +89,25 @@ $("aside.left-side ul li").on("click", function(){
         $("section."+$(this).data("dir")).css({"display":"block"}).animate({"opacity":"1"});
         $(this).addClass("active").siblings().removeClass("active");
     }
-});
+}
+
+function OpenProfile(){
+    $("section.content").children().css(({"display":"none", "opacity":"0"}));
+    $("aside.left-side ul li.profileLink").addClass("active").siblings().removeClass("active");
+    $("section."+$("aside.left-side ul li.profileLink").data("dir")).css({"display":"block"}).animate({"opacity":"1"});
+}
+function OpenDash(){
+    $("section.content").children().css(({"display":"none", "opacity":"0"}));
+    $("aside.left-side ul li.dash").addClass("active").siblings().removeClass("active");
+    $("section."+$("aside.left-side ul li.dash").data("dir")).css({"display":"block"}).animate({"opacity":"1"});
+}
+function OpenAdmin(){
+    $("section.content").children().css(({"display":"none", "opacity":"0"}));
+    $("aside.left-side ul li.admin").addClass("active").siblings().removeClass("active");
+    $("section."+$("aside.left-side ul li.admin").data("dir")).css({"display":"block"}).animate({"opacity":"1"});
+}
+
+$("aside.left-side ul li").on("click", changeLink);
 
 // start of make rotated arrow
 $(".rotate").on("click", function(){
@@ -113,18 +130,35 @@ $("i.ll").on("click", function(){
 
 // start of change theme of of website ----not finished---
 var style = $("link.sepp");
-$("ul li.chng").on("click", function(){
-    "use strict";
-    var STYLE_ROOT        = "/mazad/css/styles/";
-    var themeCountNumber  = $("link.sepp").data('count');
-    var currentTheme      = $("link.sepp").data('cur');
-    var nextTheme         = currentTheme + 1;
-    if(nextTheme > themeCountNumber){
-        nextTheme = 1;
+function changeTheme(){
+        "use strict";
+        var STYLE_ROOT        = "/mazad/css/styles/";
+        var themeCountNumber  = $("link.sepp").data('count');
+        var currentTheme      = $("link.sepp").data('cur');
+        var nextTheme         = currentTheme + 1;
+        if(nextTheme > themeCountNumber){
+            nextTheme = 1;
+        }
+        var nextThemePathName = STYLE_ROOT + "frontEnd" + nextTheme + ".css";
+        $("link.sepp").attr('href', nextThemePathName);
+        $("link.sepp").data('cur', nextTheme);
+}
+$("ul li.chng").on("click", changeTheme);
+
+$(document).on("keydown", function(e){
+    if(e.shiftKey  && e.which == 84){
+        changeTheme();
     }
-    var nextThemePathName = STYLE_ROOT + "frontEnd" + nextTheme + ".css";
-    $("link.sepp").attr('href', nextThemePathName);
-    $("link.sepp").data('cur', nextTheme);
+    if(e.shiftKey  && e.which == 80){
+        OpenProfile();
+    }
+    if(e.shiftKey  && e.which == 68){
+        OpenDash();
+    }
+    if(e.shiftKey  && e.which == 65){
+        OpenAdmin();
+    }
+    console.log(e.which);
 });
 
 // start of append switch content to assig css
