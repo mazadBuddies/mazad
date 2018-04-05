@@ -88,6 +88,7 @@ function changeLink(){
         /***************************************************************************/
         $("section."+$(this).data("dir")).css({"display":"block"}).animate({"opacity":"1"});
         $(this).addClass("active").siblings().removeClass("active");
+        setCookie("dire", $(this).data("dir"), 1);
     }
 }
 
@@ -140,23 +141,33 @@ function changeTheme(){
             nextTheme = 1;
         }
         var nextThemePathName = STYLE_ROOT + "frontEnd" + nextTheme + ".css";
+        
         $("link.sepp").attr('href', nextThemePathName);
         $("link.sepp").data('cur', nextTheme);
+        setCookie("theme", nextThemePathName, 1);
 }
+if(getCookie("theme")!= undefined){
+    $("link.sepp").attr('href', getCookie("theme"));
+    console.log(getCookie("theme"));
+}
+
 $("ul li.chng").on("click", changeTheme);
 
 $(document).on("keydown", function(e){
-    if(e.shiftKey  && e.which == 84){
+    if(e.shiftKey && e.which == 84){
         changeTheme();
     }
     if(e.shiftKey  && e.which == 80){
         OpenProfile();
+        setCookie("dire", "profile", 1);
     }
     if(e.shiftKey  && e.which == 68){
         OpenDash();
+        setCookie("dire", "dashboard", 1);
     }
     if(e.shiftKey  && e.which == 65){
         OpenAdmin();
+        setCookie("dire", "admin-panel", 1);
     }
     //console.log(e.which);
 });

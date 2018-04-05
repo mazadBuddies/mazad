@@ -82,9 +82,6 @@ function getNewOffers(){
     var formDataInfo = new FormData();
     formDataInfo.append("ACTION", "GET_NEW_OFFERS");
     formDataInfo.append("curOffer", currentOffer);
-    console.log(currentOffer);
-
-
     $.ajax({
         url: "class/session.class.php",
         method: "POST",

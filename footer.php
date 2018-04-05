@@ -8,5 +8,7 @@
 <script src=<?php echo "'" . JS_DIR . "ajaxRequestMainPages.js" . "'";?>></script>
 <script src=<?php echo "'" . JS_DIR . "session.js" . "'";?> ></script>
 <script src=<?php echo "'" . JS_DIR . "forms.js" . "'";?> ></script>
+<script src=<?php echo "'" . JS_DIR . "cookiesFunctions.js" . "'";?> ></script>
 <script src=<?php echo "'" . JS_DIR . "main.js" . "'";?> ></script>
+<script src=<?php echo "'" . JS_DIR . "changeDir.js" . "'";?> ></script>
 </html>

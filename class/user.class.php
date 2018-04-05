@@ -152,7 +152,13 @@ class user{
 
         return $this;
     }
-
+    public function getUserInfoById( $id ){
+        $connect = new dataBase (HOST , DB_NAME , DB_USER , DB_PASS);
+        $connect->setTable('user');
+        $data = $connect->select('*' , array('id') , array($id));
+         return $data ;
+   }
+   
     /**
      * Get the value of imgPath
      */
@@ -160,5 +166,24 @@ class user{
         echo ($_SESSION['imagePath'] == '')?"imgs/12.jpg":$_SESSION['imagePath'];
         
     }//end of getImage
+
+    public function getGenderAsString($number){
+        return ($number == 1)?"Male":"Female";
     }
 
+    
+    }
+
+
+
+    if ($_SERVER['REQUEST_METHOD']== 'POST'){
+        if ($_POST['ACTION'] == 'Edit'){
+            $connect = new dataBase(HOST , DB_NAME , DB_USER , DB_PASS);
+             $connect->setTable("user");
+            $firstName = $_POST['firstName'];
+            $lastName = $_POST['lastName'];
+            $email= $_POST['email'];
+            $userName = $_POST['userName'];
+             $connect->update(array('firstName', 'lastName' , 'email' , 'userName'), array($firstName , $lastName , $email , $userName) ,array('id') , array($_POST['id']));
+        }
+    }

@@ -220,7 +220,7 @@ function ajaxSubmit(e){
         var splitedArrayOfDataValue = dataAsString.split('|');
     }
     formData = makeInsertArray(formData, new FormData());
-    formData.append("ACTION", $(this).data('action'));
+    formData.append("ACTION", accept);
     if($(this).data('values') != undefined){
         for(var i = 0; i < splitedArrayOfDataValue.length; i++){
             var currentIndexKeyValue = splitedArrayOfDataValue[i].split("=>");
@@ -235,6 +235,7 @@ function ajaxSubmit(e){
         cache: false,
         processData: false,
         success: function(data){
+            //alert(data);
             //ajaxSuccessFunctions[0](data);
         },
         error: function(data){
