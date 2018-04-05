@@ -17,11 +17,12 @@ function pressPlusToAddLastValue(){
     return $(".offerPanel").val();
 }// end pressPlusToAddLastValue function
 
-function offerIsFitWithIncreamentValue(offer){
+function offerIsFitWithIncreamentValue(offer, increament){
     var arrayOfErrors = [];
     if(isNumber(offer) != 0){
         arrayOfErrors.unshift("This Not Number");
     }
+
     
 }// end of offerIsFitWithIncreamentValue fuction
 

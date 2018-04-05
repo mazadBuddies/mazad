@@ -4,6 +4,7 @@
     *          this file contains js for broadcastring chat         *
     *****************************************************************
 */
+
 function setChatBottom(){
     /*
         setChatBottom - Function _- VOID
@@ -28,6 +29,7 @@ function mkOfferValue(){
     $('button.myBtn.ajax').data('values'," ");
     values = "|"+"offer=>"+String(pressPlusToAddLastValue());
     $('button.myBtn.ajax').data('values', values);
+
 }// end of function mkOfferValue
 
 
