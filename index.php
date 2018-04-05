@@ -8,14 +8,13 @@
     
 ?>
 
-<!-- xxxx -->
-<section class="content">
-    
-<div class="overlay">
-    <i class="far fa-times-circle exit-icon"></i>
-    <div class="edit"></div>
-</div>
+<section class="content">    
+    <div class="overlay">
+        <i class="far fa-times-circle exit-icon"></i>
+        <div class="edit"></div>
+    </div>
 
+    
 <?php 
     $master = new user();
     include INCLUDES_DIR . "dashboard.inc.php";
@@ -30,9 +29,6 @@
 
 </section><!-- end of section conent-->
 <!-- start of add session-->
-
-
-
 
 
 

@@ -133,7 +133,7 @@ class session{
 	public function getNewOffers($bigSessionOffer){
 		$connectToDatabase	= new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
 		$connectToDatabase->setTable('sessionOffers');
-		$offersData		 	=$connectToDatabase->selectWithOperator("offer, userId, offerTime", array("offer"), array(">"), array($bigSessionOffer));
+		$offersData		 	= $connectToDatabase->selectWithOperator("offer, userId, offerTime", array("offer"), array(">"), array($bigSessionOffer));
 		$sizeOfOferData = sizeof($offersData);
 		$newSessionOffers = array();
 		if($sizeOfOferData > 0){
@@ -164,11 +164,12 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 	elseif($_POST['ACTION'] == 'INSERT_OFFER'){
 		$sessionToAddNewOffer = new session();
 		print_r($sessionToAddNewOffer->insertOffer());
-
-		//echo "1";
 	}
 
 	if($_POST['ACTION'] == 'GET_NEW_OFFERS'){
+		/*
+			we need to send id for this function in request
+		*/
 		$sessionToreturnNewOffers = new session();
 		print_r($sessionToreturnNewOffers->getNewOffers($_POST['curOffer']));
 	}

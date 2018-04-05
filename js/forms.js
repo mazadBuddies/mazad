@@ -206,27 +206,30 @@ function ajaxFileSubmit(e){
     });// end of accept action function
 }// end of function
 
+var ajaxSuccessFunctions = [addedNewOfferSuc]; // this array for ajax success functions
 
-var ajaxSuccessFunctions = [addedNewOfferSuc];
 function ajaxSubmit(e){
     e.preventDefault();
-    var url = $(this).data("url");
+    var url      = $(this).data("url");
     var formData = $(this).serializeArray();
     var method   = $(this).data('method');
     var accept   = String($(this).data('accept'));
+    var action   = $(this).data('action');
+    
     mkOfferValue();
     if($(this).data('values') != undefined){
         var dataAsString = $(this).data('values');
         var splitedArrayOfDataValue = dataAsString.split('|');
     }
     formData = makeInsertArray(formData, new FormData());
-    formData.append("ACTION", accept);
+    console.log(action);
+    formData.append("ACTION", action);
     if($(this).data('values') != undefined){
         for(var i = 0; i < splitedArrayOfDataValue.length; i++){
             var currentIndexKeyValue = splitedArrayOfDataValue[i].split("=>");
             formData.append(currentIndexKeyValue[0],currentIndexKeyValue[1]);
-        }
-    }
+        }// end of for
+    }//end of if
     $.ajax({
         url: url,
         method: method,
@@ -234,10 +237,6 @@ function ajaxSubmit(e){
         contentType: false,
         cache: false,
         processData: false,
-        success: function(data){
-            //alert(data);
-            //ajaxSuccessFunctions[0](data);
-        },
         error: function(data){
             console.log("error");
             alert(data);
@@ -248,17 +247,3 @@ function ajaxSubmit(e){
 $(".ajax.click").on("click", ajaxSubmit);
 $(".ajax_file.submit").on("submit", ajaxFileSubmit);
 $(".ajax.submit").on("submit", ajaxSubmit);
-
-//var interval = setInterval(good, 1000);
-
-/*
-function printLogo(){
-    "use strict"
-    console.log("*      * **** ****** **** * *             \n");
-    console.log("* *  * * *  *     *  *  * *  *   \n");
-    console.log("*  *   * ****    *   **** *    *    \n");
-    console.log("*      * *  *   *    *  * *   *     \n");
-    console.log("*      * *  * ****** *  * * *        \n");
-}
-printLogo();
-*/

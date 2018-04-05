@@ -26,3 +26,7 @@ $('.loader').each( function(index){
 	$(this).append(loaderHtmlContentIndexed[$(this).data('kind')-1]);
 });
 
+$(document).on("ready", function(){
+	"use strict";
+	$(".loader-overlay").fadeOut(1000);
+});

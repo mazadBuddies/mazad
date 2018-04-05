@@ -148,7 +148,6 @@ function changeTheme(){
 }
 if(getCookie("theme")!= undefined){
     $("link.sepp").attr('href', getCookie("theme"));
-    console.log(getCookie("theme"));
 }
 
 $("ul li.chng").on("click", changeTheme);

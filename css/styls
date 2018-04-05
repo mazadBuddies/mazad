@@ -1,0 +1,42 @@
+/*
+Error: Invalid property: "Backtrace:" (no value).
+        on line 4 of /var/www/html/mazad/sass
+
+1: /*
+2: Errno::ENOENT: No such file or directory @ rb_sysopen - /var/www/html/mazad/sass
+3: 
+4: Backtrace:
+5: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:484:in `read'
+6: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:484:in `update_stylesheet'
+7: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+8: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+9: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+
+Backtrace:
+/var/www/html/mazad/sass:4
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:733:in `parse_property'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:692:in `parse_property_or_rule'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:658:in `parse_line'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:536:in `build_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:555:in `block in append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:554:in `each'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:554:in `append_children'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:409:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:294:in `watch'
+/usr/lib/ruby/vendor_ruby/sass/plugin.rb:109:in `method_missing'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:356:in `watch_or_update'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
+/usr/bin/sass:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid property: \"Backtrace:\" (no value).\A         on line 4 of /var/www/html/mazad/sass\A \A 1: /*\A 2: Errno::ENOENT: No such file or directory @ rb_sysopen - /var/www/html/mazad/sass\A 3: \A 4: Backtrace:\A 5: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:484:in `read'\A 6: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:484:in `update_stylesheet'\A 7: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\A 8: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'\A 9: /usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'"; }

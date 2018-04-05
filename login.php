@@ -23,7 +23,7 @@
                         <div class="email col-12">
                             <label for="email" class="col-12">Email address</label>
                             <div class="border">
-                                <input type="email" name="email" class="col-12" placeholder='Your@mail.com' />
+                                <input type="email" name="email" class="col-12" placeholder='Your@mail.com' checked/>
                             </div>
                         </div>
                     </div>

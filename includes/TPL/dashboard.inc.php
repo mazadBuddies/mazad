@@ -3,7 +3,7 @@
     $masterSession = new session();
     $masterSession->getSessionById(1);
     $offerTableData = $masterSession->getOffersBySesionId(1);
-    $masterSession->getNewOffers(123344);
+    //$masterSession->getNewOffers(123344);
 ?>
 <section class="dashboard session-all col-11">
     <div class="container-fluid">
@@ -15,7 +15,6 @@
 
         <div class="sessionConnect">
             <div class="row">
-
                 <div class="sessionOffers col-7">
                     <h3>Session Offers</h3>
                     <div class="scroll">
@@ -54,11 +53,10 @@
                     </div>
                     <div class="setOffer">
                         <div class="offerInfo">
-
                         </div>
                         <div class="offerInput mrg-input">
                                 <input type="text" name="offer" placeholder="Enter Your Offer Here" class="offerPanel"/>
-                                <button type="submit" class="myBtn ajax click addNewOffer"  data-url="class/session.class.php" data-action="INSERT_OFFER" data-accept="1" data-method="POST" data-values=""/>Offer</button>
+                                <button class="myBtn ajax click addNewOffer"  data-url="class/session.class.php" data-action="INSERT_OFFER" data-accept="1" data-method="POST" data-values=""/>Offer</button>
                         </div>
                     </div>
                 </div><!--end of sessionOffers-->
