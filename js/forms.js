@@ -205,8 +205,10 @@ function ajaxFileSubmit(e){
         }// end of ig
     });// end of accept action function
 }// end of function
-
-var ajaxSuccessFunctions = [addedNewOfferSuc]; // this array for ajax success functions
+function defaultAjaxFunction(data){
+    return 0;
+}
+var ajaxSuccessFunctions = [defaultAjaxFunction ,addedNewOfferSuc]; // this array for ajax success functions
 
 function ajaxSubmit(e){
     e.preventDefault();
@@ -215,14 +217,13 @@ function ajaxSubmit(e){
     var method   = $(this).data('method');
     var accept   = String($(this).data('accept'));
     var action   = $(this).data('action');
-    
+    var functionIndex = 0;
     mkOfferValue();
     if($(this).data('values') != undefined){
         var dataAsString = $(this).data('values');
         var splitedArrayOfDataValue = dataAsString.split('|');
     }
     formData = makeInsertArray(formData, new FormData());
-    console.log(action);
     formData.append("ACTION", action);
     if($(this).data('values') != undefined){
         for(var i = 0; i < splitedArrayOfDataValue.length; i++){
@@ -230,6 +231,10 @@ function ajaxSubmit(e){
             formData.append(currentIndexKeyValue[0],currentIndexKeyValue[1]);
         }// end of for
     }//end of if
+    if($(this).data('function') != undefined){
+        functionIndex = parseInt($(this).data('function'));
+    }
+    
     $.ajax({
         url: url,
         method: method,
@@ -237,6 +242,7 @@ function ajaxSubmit(e){
         contentType: false,
         cache: false,
         processData: false,
+        success: ajaxSuccessFunctions[functionIndex],
         error: function(data){
             console.log("error");
             alert(data);

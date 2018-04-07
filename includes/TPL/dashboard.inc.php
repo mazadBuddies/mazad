@@ -56,7 +56,10 @@
                         </div>
                         <div class="offerInput mrg-input">
                                 <input type="text" name="offer" placeholder="Enter Your Offer Here" class="offerPanel"/>
-                                <button class="myBtn ajax click addNewOffer"  data-url="class/session.class.php" data-action="INSERT_OFFER" data-accept="1" data-method="POST" data-values=""/>Offer</button>
+                                <button class="myBtn ajax click addNewOffer"  data-url="class/session.class.php" data-action="INSERT_OFFER" data-accept="0" data-method="POST" data-values="" data-function="1"/>Offer</button>
+                        </div>
+                        <div class="errors">
+                            
                         </div>
                     </div>
                 </div><!--end of sessionOffers-->
@@ -64,33 +67,48 @@
                 <div class="sessionBroadCast col-4">
                     <div class="messages">
                         <?php 
-                        for($i=0;$i<4;$i++)
-                        {
-                            echo '<div class="message me row">
-                            <div class="message-text">Test test test test test</div>
-                            <div class="cir">
-                                <img class="img-responsive" src="imgs/islam.jpg"></img>
-                            </div>
-                        </div>
-                        <div class="message other row">
-                            <div class="cir">
-                                <img class="img-responsive" src="imgs/sherif.jpg"></img>
-                            </div>
-                            <div class="message-text">Test test test test test</div>
-                        </div>
-                        <div class="message other row">
-                            <div class="cir">
-                                <img class="img-responsive" src="imgs/12.jpg"></img>
-                            </div>
-                            <div class="message-text">Test test test test test</div>
-                        </div>
-                        ';
+                        $messageSize = sizeof($masterSession->getSessionMessagesById(1));
+                        $Sessionmessages = $masterSession->getSessionMessagesById(1);
+                        for($i=0; $i<$messageSize; $i++){
+                            if($_SESSION['id'] == $Sessionmessages[$i]['fromId']){
+                                echo '
+                                    <div class="message me row">
+                                        <div class="message-text">';
+                                        echo $Sessionmessages[$i]['meesage'];
+                                        echo '</div>
+                                        <div class="cir">
+                                            <img class="img-responsive" src="';
+                                                echo $Sessionmessages[$i]['fromImage'];
+                                            echo'"></img>
+                                        </div>
+                                    </div>';
+                            }//end of if "my message"
+                            else{
+                                echo '
+                                    <div class="message other row">';
+                                    echo '<div class="cir">
+                                            <img class="img-responsive" src="';
+                                                echo $Sessionmessages[$i]['fromImage'];
+                                            echo'"></img>
+                                        </div>';
+                                        echo '<div class="message-text">';
+                                            echo $Sessionmessages[$i]['meesage'];
+                                        echo '</div>';
+                                    echo '</div>';
+                            }//end of else
+                        }//end of for
+                        if($messageSize > 0){
+                            echo '<input type="hidden" id="lastMessageTime" data-max="'. $Sessionmessages[$messageSize-1]['messageTime'] .'">';
+                        }else{
+                            echo '<input type="hidden" id="lastMessageTime" data-max="2018-03-07 03:04:48">';
                         }
+                        
+                        echo '<input type="hidden" id="activeUserId" data-id="'. $_SESSION['id'] .'"/>';
                         ?>
                     </div><!--end of message-->
                     <div class="send mrg-input">
-                        <input type="text" name="message" placeholder="Enter Your Message Here, Hashem!"/>
-                        <button >Send</button>
+                        <input type="text" name="message" placeholder="Enter Your Message Here, <?php echo $_SESSION['firstName']?>!" id="sessionMessageText"/>
+                        <button class="ajax click" id="snd-msg" data-url="class/session.class.php" data-action="INSERT_MESSAGE" data-accept="0" data-method="POST" data-values="" data-function="0" >Send</button>
                     </div><!--end of send-->
                 </div><!--end of sessionBroadCast-->
             </div><!--end of row-->

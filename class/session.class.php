@@ -114,13 +114,29 @@ class session{
 	}
 
 	public function insertOffer(){
+		
 		$dataInfo = array();
 		$userId 	= $_SESSION['id'];
 		$offer		= $_POST['offer'];
 		$time		= date('Y-m-d h:m:s');
 		$connectToDatabase = new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
 		$connectToDatabase->setTable('sessionOffers');
-		$connectToDatabase->insert($this->insertOfferArray, array($offer, $userId, $_SESSION['sessionId'], $time));
+		$errorReportingOfOffer = array();
+		//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		if(!filter_var($offer, FILTER_VALIDATE_INT)){
+			$errorReportingOfOffer[] = "This Not a number";
+		}//end of if
+		if($connectToDatabase->getMaxValueByColumnName("offer",array("sessionId"), array($_SESSION['sessionId']))[0][0] >= $offer){
+			$errorReportingOfOffer[] = "This Offer Less than Current Offer";
+		}//end of if
+		//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		if(sizeof($errorReportingOfOffer) == 0){
+			$connectToDatabase->insert($this->insertOfferArray, array($offer, $userId, $_SESSION['sessionId'], $time));
+		}//end of if
+
+		return json_encode($errorReportingOfOffer);
+		
+		/*
 		$connectToDatabase->setTable('user');
 		$userInfo 	= $connectToDatabase->select('firstName, imagePath', array('id'), array($userId));
 		$dataInfo['offer'] = $offer;
@@ -128,6 +144,7 @@ class session{
 		$dataInfo['photo'] = $userInfo[0]['imagePath'];
 		$dataInfo['time']  = $time;
 		return json_encode($dataInfo);
+		*/
 	}
 
 	public function getNewOffers($bigSessionOffer){
@@ -152,26 +169,88 @@ class session{
 		}//end of if
 		return json_encode($newSessionOffers);
 	}//end of function 
+
+	public function getSessionMessagesById($id){
+		$connectToDatabase	= new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
+		$connectToDatabase->setTable('sessionChat');
+		$allsessionMessage 	= $connectToDatabase->select("message, fromId, messageTime", array("sessionId"),array($id));
+		$messagesView		= array();
+		$connectToDatabase->setTable('user');
+		for($i = 0; $i < (int)sizeof($allsessionMessage); $i++){
+			$userInfo = $connectToDatabase->select("firstName, imagePath", array('id'), array($allsessionMessage[$i]['fromId']));
+			$userMessageAsRow = array(
+								"fromId" 	=> $allsessionMessage[$i]['fromId'],
+								"fromName"	=> $userInfo[0]['firstName'],
+								"meesage"	=>$allsessionMessage[$i]['message'],
+								"fromImage"	=> $userInfo[0]['imagePath'],
+								"messageTime"=> $allsessionMessage[$i]['messageTime']
+							);
+			$messagesView[] = $userMessageAsRow;
+		}//end of for
+		return $messagesView;
+	}//end of function getSessionMessagesById
+
+	public function insertSessionMessage($msg, $frmId, $sesId){
+		$message 	= $msg;
+		$fromId 	= $frmId;
+		$sessionId 	= $sesId;
+		$time		= date('Y-m-d H:i:s');
+		$connectToDatabase	= new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
+		$connectToDatabase->setTable('sessionChat');
+		$connectToDatabase->insert(array('message', 'fromId', 'sessionId', 'messageTime'), array($message, $fromId, $sessionId, $time));
+	}//end of function
+
+	public function getNewMessages(){
+		//print_r($_POST);
+		$maxTime = $_POST['lastDisplayed'];
+		$connectToDatabase	= new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
+		$connectToDatabase->setTable('sessionChat');
+		$newMessages = $connectToDatabase->selectWithOperator("message, fromId, sessionId, messageTime", array('messageTime', 'sessionId'), array('>', '='), array($maxTime, $_SESSION['sessionId']));
+		$connectToDatabase->setTable('user');
+		$messageAsView = array();
+		for($i=0; $i<(int)sizeof($newMessages); $i++){
+			$userInfo = $connectToDatabase->select('firstName, imagePath', array('id'), array($newMessages[$i]['fromId']));
+			$userInfoAsRow = array(
+				"firstName" 	=> $userInfo[0]['firstName'],
+				"imagePath" 	=> $userInfo[0]['imagePath'],
+				"message"		=> $newMessages[$i]['message'],
+				"messageTime"	=> $newMessages[$i]['messageTime'],
+				"fromId"		=> $newMessages[$i]['fromId']
+			);
+			$messageAsView[] = $userInfoAsRow;
+		}//end of for
+		return $messageAsView;
+	}
 }//end of class session
 
 if($_SERVER['REQUEST_METHOD'] === "POST"){
-	if($_POST['ACTION'] == 'ADD')
-	{
+
+	if($_POST['ACTION'] == 'ADD'){
 		$lol = new session('add');
 		echo "1";
 	}
 
 	elseif($_POST['ACTION'] == 'INSERT_OFFER'){
+		//print_r($_POST);
 		$sessionToAddNewOffer = new session();
 		print_r($sessionToAddNewOffer->insertOffer());
-	}
+	}//end of else if
 
-	if($_POST['ACTION'] == 'GET_NEW_OFFERS'){
+	elseif($_POST['ACTION'] == 'GET_NEW_OFFERS'){
 		/*
 			we need to send id for this function in request
 		*/
 		$sessionToreturnNewOffers = new session();
 		print_r($sessionToreturnNewOffers->getNewOffers($_POST['curOffer']));
-	}
-}
+	}//end of if
 
+	elseif($_POST['ACTION'] == 'INSERT_MESSAGE'){
+		$sessionToreturnNewOffers = new session();
+		$sessionToreturnNewOffers->insertSessionMessage($_POST['message'], $_SESSION['id'],$_SESSION['sessionId']);
+	}
+
+	elseif($_POST['ACTION'] == 'GET_NEW_MESSAGE'){
+		$sessionToreturnNewOffers = new session();
+		print_r(json_encode($sessionToreturnNewOffers->getNewMessages()));
+	}// end of else if
+}//end of if $_SERVER
