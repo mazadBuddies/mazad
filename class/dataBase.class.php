@@ -7,7 +7,6 @@
 */
     ini_set('display_errors', 1);//this for show errs
     error_reporting(~0);// the same target
-
     class dataBase{
         /* start of props */
         private $dsn;// this var to define data source name
@@ -61,16 +60,23 @@
             $fin = $this->mkInsertArray($whereIn, $whereEq); //set values in [key => value] array to execute it
             if($get){return $this->executeQuery(false, true, $fin);}//if we pass parameter get true => return data
         }//end of mkQuery
+// XXXXXXXXXXXXXXXXXXXXXXX
+        public function selectWithOperator($select = "*", $whereIn = array(), $operators = array(),$whereEq = array()){
+            $where = $this->whereFormatWithOperators($whereIn, $operators);// set where query as string to mk new sql
+            $this->curQuery = "SELECT $select FROM $this->curTable WHERE $where"; // set current query fo select syntax
+            $fin = $this->mkInsertArray($whereIn, $whereEq); //set values in [key => value] array to execute it
+            return $this->executeQuery(false, true, $fin);
+        }
 
         public function executeQuery($getCount = false, $get = false, $data = array()){
             try{
                 $stmt = $this->con->prepare($this->curQuery);//try to mk prepare statement
-                if((int)sizeof($data) != 0){$stmt->execute($data) ;}//if we pass data he execute it
+                if((int)sizeof($data) != 0){$stmt->execute($data);}//if we pass data he execute it
                 else{$stmt->execute();}// else execute without array
                 if($getCount){return $stmt->rowCount();}// if you execute query for count only set it true
                 if($get){return $stmt->fetchAll();}// get data if you set get true
             }catch(PDOException $e){
-                echo 'faild to execute query' . $e->getMessage();// if not suc. to execute query get error massege 
+                echo  $e->getMessage();// if not suc. to execute query get error massege 
             }//end of catch
         }//end of executeQuery
 
@@ -100,6 +106,15 @@
             $str = '';
             for($i = 0 ; $i<(int)sizeof($whereArr); $i++)
                 $str .= $whereArr[$i] . ' = :' . $whereArr[$i] . $seb . ' ';// make string as where format
+            $str = chop($str, $seb);// remove last sep.
+            return $str;// return gen. str
+        }// end of whereFormat function
+
+        public function whereFormatWithOperators($whereArr, $operators = array(), $seb = ' AND'){
+            if((int)sizeof($whereArr) == 0)return '1';//if no condition (Array is Empty) return 1 "No Condition set"
+            $str = '';
+            for($i = 0 ; $i<(int)sizeof($whereArr); $i++)
+                $str .= $whereArr[$i] . $operators[$i] .' :' . $whereArr[$i] . $seb . ' ';// make string as where format
             $str = chop($str, $seb);// remove last sep.
             return $str;// return gen. str
         }// end of whereFormat function
@@ -187,6 +202,25 @@
             $this->curQuery = "SELECT  MAX(id) AS max FROM $this->curTable";
             return $this->executeQuery(false, true);
         }
+
+        public function whereFormatWithQusetionMark($array){
+            $str = '';
+            if((int)sizeof($array)>0){
+                for($i = 0; $i< sizeof($array);$i++){
+                    $str .= $array[$i] . '=?' . 'AND ';
+                }//end of for
+            }//end of if
+            return chop($str, "AND ");
+        }
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXxXxXxXxX
+        public function getMaxValueByColumnName($colName, $arrayCol = array(), $arrayEq = array()){
+            $whereFormatAsString = $this->whereFormatWithQusetionMark($arrayCol);
+            $this->curQuery = "SELECT  MAX($colName) AS max FROM $this->curTable WHERE $whereFormatAsString";
+            return $this->executeQuery(false, true, $arrayEq);
+        }//end of function getMaxValueByColumnName
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
         public function mk(){
                 $Make = array();
                 if($this->isDatabase('mazad'))$Make[] = 'DROP DATABASE mazad';
@@ -312,6 +346,15 @@
                     FOREIGN KEY (userId) REFERENCES user(id),
                     FOREIGN KEY (sessionId) REFERENCES session(id)
                 );';
+                $Make[] = 'CREATE TABLE sessionChat(
+                    id int(11) AUTO_INCREMENT  PRIMARY KEY,
+                    message varchar(255) NOT NULL,
+                    fromId int(11) NOT NULL,
+                    sessionId int(11) NOT NULL,
+                    messageTime DATETIME NOT NULL,
+                    FOREIGN KEY (fromId) REFERENCES user(id),
+                    FOREIGN KEY (sessionId) REFERENCES session(id)
+                );';
                 for($i = 0 ; $i< sizeof($Make); $i++){
                     $this->setSqlQur($Make[$i]);
                 }//end of loop function
@@ -329,6 +372,67 @@
                 }//end of loop function
             }//end of edit function
     }//end of class data base
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 /*
 $con = new dataBase(HOST, DB_NAME, DB_USER, DB_PASS);
 $con->setTable('user');

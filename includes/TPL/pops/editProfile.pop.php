@@ -1,19 +1,28 @@
-<?php echo '
+<?php
+        include "../../../config/directors.config.php";
+        include CLASS_DIR . "autoLoader.class.php";
+
+        $masterUser = new user ();
+        $IdData = $masterUser->getUserInfoById(6);
+?>
+
 <div class="form col-lg-4 col-md-6 col-sm-8" id="test">
           <div class="myCon">
-               <h2 class="title"><i class="fa fa-bullseye"></i>Edit MY INFO</h2>
-                <form action="" class="signUp" method="post" autocomplete="off">
+               <h2 class="title"><i class="fa fa-bullseye"></i>Edit MY INFO </h2>
+                <form method="POST" class="signUp ajax submit" data-method="post" autocomplete="off" enctype="multipart/form-data" id="editProfile" data-action="Edit" data-accept="1" data-url="class/user.class.php">
                     <div class="row">
                         <div class="firstName col-6">
                             <label for="firstName" class="col-12">First Name</label>
+                            <input name="ACTION" value="Edit" type="hidden">
                             <div class="border">
-                                <input type="text" name="firstName" class="col-12" placeholder="more than 3 chars"/>
+                                <input type="text" name="firstName" class="col-12" value="<?php echo $IdData[0]['firstName']?>"/>
                             </div>
                         </div>
                         <div class="lastName col-6">
+                            
                             <label for="lastName" class="col-12">Last Name</label>
                             <div class="border">
-                                <input type="text" name="lastName" class="col-12"  placeholder="more than 3 chars"/>
+                                <input type="text" name="lastName" class="col-12"  value="<?php echo $IdData[0]['lastName']?>"/>
                             </div>
                         </div>
                     </div>
@@ -21,7 +30,7 @@
                         <div class="email col-12">
                             <label for="email" class="col-12">Email address</label>
                             <div class="border">
-                                <input type="email" name="email" class="col-12"  placeholder="Your@mail.com"/>
+                                <input type="email" name="email" class="col-12"  value="<?php echo $IdData[0]['email']?>"/>
                             </div>
                         </div>    
                     </div>
@@ -29,7 +38,7 @@
                         <div class="userName col-12">
                             <label for="userName" class="col-12">Username</label>
                             <div class="border">
-                                <input type="text" class="col-12" name="userName"  placeholder="eg. mr.robot"/>
+                                <input type="text" class="col-12" name="userName"  value="<?php echo $IdData[0]['userName']?>"/>
                             </div>
                         </div>    
                     </div>
@@ -58,13 +67,17 @@
                             </div>
                         </div>
                     </div>
-                    
+                      <input type="hidden" value="6" name="id"/>
+                      
                     <div class="sup">
                         <input type="submit" value = "EDIT INFO"/>
                     </div>
                 </form>
             </div>
             <p>
-                <!--* By signing up, you agree to receive Stox emails, newsletters &amp; updates.-->
+                * By Editing your Info , you agree to changing your Profile Info. 
             </p>
-        </div>';
+        </div>
+        <script src="../../../js/jquery.min.js"></script>
+        <script src="../../../js/forms.js"></script>
+        <script src="../../../js/main.js"></script>

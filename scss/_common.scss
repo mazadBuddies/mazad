@@ -28,7 +28,8 @@ and open the template in the editor.
 @import "_comp/_feedbacks.scss";
 @import "_comp/_admin.scss";
 @import "_comp/_popUp.scss";
-
+@import "_comp/_session.scss";
+@import "_libs/_overlayLoader.scss";
 *{
     margin: 0px;
     padding: 0px;
@@ -126,20 +127,6 @@ div.bt{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 div.switch{
     @include switch(150px, 30px, $main-color, $red, $def);
 }
@@ -195,3 +182,4 @@ select {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+

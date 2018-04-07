@@ -1,21 +1,21 @@
 <aside class="left-side">
     <div class="content">
         <ul>
-            <li data-dir = "dashboard" data-on="true" class="active side">
+            <li data-dir = "dashboard" data-on="true" class="active side dash">
                 <i class="fab fa-audible"></i>  
                 <span>Dashboard</span>
             </li>
             <?php 
                 $masterUser = new user();
                 if($masterUser->getRole() == 1){
-                    echo    '<li data-dir = "admin-panel" data-on="true">
+                    echo    '<li data-dir = "admin-panel" data-on="true" class="admin">
                                 <i class="fab fa-buromobelexperte"></i>
                                 <span>Admin panel</span>
                             </li>';
                             //<i class="fab fa-black-tie"></i>
                 }//end of if
             ?>
-            <li data-dir = "profile" data-on="true">
+            <li data-dir = "profile" data-on="true" class="profileLink">
                 <i class="far fa-user-circle"></i>
                 <span>Account</span>
             </li>

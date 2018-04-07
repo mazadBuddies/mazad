@@ -1,5 +1,9 @@
 
+<?php
+    $masterUser = new user ();
+    $IdData = $masterUser->getUserInfoById($_SESSION['id']);
 
+?>
 <section class="profile col-11">
         <div class="container-fluid">
             <h2 class="head">My Account</h2>
@@ -29,27 +33,34 @@
                             <!--acive here-->
                         </div>
                     </div>
-                    <span class="name"><?php  
-                    $master = new user();
-                    echo $master->getFullName();
-                    ?></span>
+                    <span class="name"><?php
+                             echo $IdData[0]['firstName'] ." ". $IdData[0]['lastName'];
+                        ?></span>
                     <div class="row">
                         <table class="col-6">
                                 <tr>
                                     <th>Email</th>
-                                    <th>solieman@gmail.com</th>
+                                    <th><?php 
+
+                                    echo $IdData[0]['email'];
+                                
+                                    ?>
+                                        
+                                    </th>
                                 </tr>
                                 <tr>
                                     <th>User name</th>
-                                    <th>bodey__solieman</th>
+                                    <th><?php
+                                           echo $IdData[0]['userName'];
+                                    ?></th>
                                 </tr>
                                 <tr>
                                     <th>gender</th>
-                                    <th>male</th>
+                                    <th><?php echo $masterUser->getGenderAsString($IdData[0]['gender']);?></th>
                                 </tr>
                                 <tr>
                                     <th>Age</th>
-                                    <th>20</th>
+                                    <th></th>
                                 </tr>
                         </table>
                         <table class="col-6">
