@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="fonts/SEGOEUI.ttf"/>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/frontEnd.css" data-style="true" class="sepp"/>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+</head>
+
+<nav class="nav-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="brand col-6">
+                <div class="row">
+                    <span class="logo col-1"><a href="#">
+                            <i class="fab fa-accusoft"></i>
+                    </a></span>
+                    <span class="name col-11">
+                        <span class="fir">MA</span>
+                        <span class="sec">ZAD</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="availble-bounce col-3">
+                <div>   
+                    <span class="bold">
+                        Available Balance:
+                    </span>
+                    <span class="balance">
+                        <span>5.00</span>
+                        <sup>EGP<i class="fa fa-dolar"></i></sup>
+                        <i class="fa fa-angle-down sz rotate"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="row">
+
+                    <div class="newSession col-1">
+                        <div class="cir">
+                            <i class="fa fa-coffee"></i>
+                        </div>
+                    </div>
+
+                    <div class="info row col-7">
+                        <div class="name">
+                            BODEY
+                        </div>
+                    </div>
+                    <div class="col-2 info">
+                        <div class="cir">
+                            <img src="/imgs/original.jpg" alt="">
+                        </div>
+                        <i class="fa fa-angle-down blur ll"></i>
+
+                        <div class="drop-down">
+                            <ul>
+                                <li>
+                                    <i class="far fa-smile"></i>
+                                    help
+                                </li>
+                                <li>
+                                    <i class="fas fa-power-off"></i>
+                                    logout
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</nav>
+
+<aside class="left-side">
+    <div class="content">
+        <ul>
+            <li class="active" data-dir = "admin-panel" data-on="true">
+                <i class="fab fa-buromobelexperte"></i>
+                <span>Admin panel</span>
+            </li>
+            <li data-dir = "profile" data-on="true">
+                <i class="far fa-user-circle"></i>
+                <span>Account</span>
+            </li>
+            <li data-on="true">
+                <i class="fas fa-assistive-listening-systems"></i>
+                <span>Make Session</span>
+            </li>
+            <li class="chng" data-on="false">
+                <i class="fas fa-paint-brush"></i>
+                <span>Theme</span>
+            </li>
+            <li data-on="true">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </li>
+            <li data-on="true">
+                <i class="fas fa-power-off"></i>
+                <span>
+                    <a href="logout.php">
+                        log out
+                    </a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</aside>
+<!-- xxxx -->
+<section class="content">
+    <section class="profile col-11">
+        <div class="container-fluid">
+            <h2 class="head">My Account</h2>
+            <div class="row">
+                <div class="col-md-12 myInfo">
+                    <h3>Info</h3>
+                    <div class="menu-header">
+                            <div class="menu">
+                                    <ul>
+                                        <li class="active" data-color="green"> 
+                                            <i class="far fa-dot-circle"></i>
+                                            active
+                                        </li>
+                                        <li data-color="black"> 
+                                            <i class="far fa-dot-circle"></i>
+                                            offline
+                                        </li>
+                                        <li data-color="red">
+                                            <i class="far fa-dot-circle"></i> 
+                                            don't show
+                                        </li>
+                                    </ul>
+                                </div>
+                        <div class="img">
+                            <img src="imgs/original.jpg" alt=""/>
+                            <!--acive here-->
+                        </div>
+                    </div>
+                    <span class="name">BODEY SOLIEMAN</span>
+                    <div class="row">
+                        <table class="col-6">
+                                <tr>
+                                    <th>Email</th>
+                                    <th>solieman@gmail.com</th>
+                                </tr>
+                                <tr>
+                                    <th>User name</th>
+                                    <th>bodey__solieman</th>
+                                </tr>
+                                <tr>
+                                    <th>gender</th>
+                                    <th>male</th>
+                                </tr>
+                                <tr>
+                                    <th>Age</th>
+                                    <th>20</th>
+                                </tr>
+                        </table>
+                        <table class="col-6">
+                            <tr>
+                                <th>RANK</th>
+                                <th> Candidate Master </th>
+                            </tr>
+                            <tr>
+                                <th>RATE</th>
+                                <th>190</th>
+                            </tr>
+                            <tr>
+                                <th>Registered</th>
+                                <th>18 months ago</th>
+                            </tr>
+                            <tr>
+                                <th>Last visit</th>
+                                <th>20 min</th>
+                            </tr>
+                    </table>
+                    </div>
+                   <button>Edit Profile</button> 
+                </div>
+            </div><!-- end of div row-->
+            <div class="row row2">
+                <div class="wallet col-6">
+                    <h3>wallet</h3>
+                    <div class="inner">
+                        <p>No Wallet Created Yet</p>
+                        <div class="cir">
+                                <i class="fab fa-google-wallet"></i>
+                        </div>
+                    </div>
+                    <button>Create Wallet</button>
+                </div>
+    
+                <div class="power col-5">
+                    <h3>
+                        Session <span>₽ower</span>
+                    </h3>
+                    <div class="content row">
+                        <div class="left col-6">
+                            <p>My ₽ower</p>
+                            <span>0.00%</span>
+                        </div><!-- end of div left-->
+                        <div class="right col-6">
+                            <div class="cir">    
+                                <i class="fab fa-phoenix-framework fa-5x"></i>
+                            </div><!-- end of div cir-->
+                        </div><!-- end of div right-->
+                    </div><!-- end of div content-->
+                    <a href="#">What is Brain Power ?</a>
+                </div><!-- end of div power-->
+                <div class="container-fluid">
+                    <div class="row activity">
+                        <div class="col-12">
+                            <h3>
+                                Activity
+                            </h3>
+                            <div class="controls">
+                                <span class="active first">My Wallet</span>
+                                <span>Session</span>
+                            </div><!-- end of div controls-->
+                            <div class="slide">
+                                <div class="inner">
+                                    <div class="myWallet">
+                                        <table class="wallet">
+                                            <tr class="head">
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <i class="fa fa-stop-circle"></i>
+                                                </th>
+                                                <th>26.02.2018</th>
+                                                <th>Free 5 EGP</th>
+                                                <th></th>
+                                                <th><span>+5.00</span><sup>EGP</sup></th>
+                                            </tr>
+                                            <tr>
+                                                    <td>
+                                                        <i class="fa fa-stop-circle"></i>
+                                                    </th>
+                                                    <th>26.02.2018</th>
+                                                    <th>Free 5 EGP</th>
+                                                    <th></th>
+                                                    <th><span>+5.00</span><sup>EGP</sup></th>
+                                                </tr>
+                                        </table>
+                                    </div><!-- end of div wallet-->
+                                    <div class="session">
+                                        <table class="session">
+                                            <tr class="head">
+                                                <th>Type</th>
+                                                <th>Date</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
+                                                <th>Final Price</th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <i class="fa fa-stop-circle"></i>
+                                                </th>
+                                                <th>10.03.2018</th>
+                                                <th>sell bike</th>
+                                                <th>Race bike with speed cog</th>
+                                                <th><span>4000</span><sup>EGP</sup></th>
+                                            </tr>
+                                        </table><!-- end of div table-->
+                                    </div><!-- end of div session-->
+                                </div><!-- end of div inner-->
+                            </div><!-- end of div slide-->
+                        </div><!-- end of div col-12-->
+                    </div><!-- end of div activity-->
+                </div><!-- end of div container-fluid-->
+    
+                <div class="following col-12">
+                    <h3>Follow</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="outter">Following</span>
+                            <div class="cir f1" data-open = "false">
+                                <span class="number">
+                                    17
+                                </span><!-- end of div span-->    
+                            </div>
+                        </div><!-- end of div col-6-->
+                        <div class="col-6">
+                            <span class="outter">Followers</span>
+                            <div class="cir f2" data-open = "false">
+                                <span class="number">
+                                    189
+                                </span><!-- end of div span-->    
+                            </div>
+                        </div><!-- end of div col-6-->
+                    </div><!-- end of div row-->
+                </div><!-- end of div follow-->
+    
+                <div class="col-12 feedbacks">
+                    <h2> Feedbacks</h2>
+                    <div class="tbl">
+                        <table>
+                            <tr class="head">
+                                <th>Photo</th>
+                                <th>Name</th>
+                                <th>Stars</th>
+                                <th>Date</th>
+                                <th>Details</th>
+                            </tr>
+    
+                            <tr>
+                                <th>
+                                    <div class="cir">
+                                        <img src="imgs/original.jpg" alt="">
+                                    </div>
+                                </th>
+                                <th>
+                                    Aisha
+                                </th>
+                                <th>
+                                    <div class="stars" data-rate = "3">
+                                        <i class="far fa-star 1"></i>
+                                        <i class="far fa-star 2"></i>
+                                        <i class="far fa-star 3"></i>
+                                        <i class="far fa-star 4"></i>
+                                        <i class="far fa-star 5"></i>
+                                    </div>
+                                </th>
+                                <th>
+                                    1.1.2018
+                                </th>
+                                <th>
+                                    Good session bro ^^
+                                </th>
+                            </tr>
+    
+                            
+                        </table>
+                    </div><!--end of div.tbl-->
+                </div>
+        </div><!-- end of div container-fluid-->
+    </section><!-- end of section profile-->
+
+    <section class="admin-panel col-11">
+        <div class="container-fluid">
+            <h2>Admin Panel</h2>
+            <div class="stat">
+                <h3>Statistics</h3>
+                <div class="con">
+                    <p>users</p>
+                    <div class="cir">
+                        <span class="number">1,982</span>
+                    </div>
+                </div>
+
+                <div class="con">
+                    <p>Sessions</p>
+                    <div class="cir">
+                        <span class="number">123</span>
+                    </div>
+                </div>
+
+                <div class="con">
+                    <p>Admin</p>
+                    <div class="cir">
+                        <span class="number">19</span>
+                    </div>
+                </div>
+
+                <div class="con">
+                    <p>Categories</p>
+                    <div class="cir">
+                        <span class="number">8</span>
+                    </div>
+                </div>
+            </div><!-- end of div.stat-->
+            <div class="manage-user">
+                <h3>manage-user</h3>
+                <div class="tbl">
+                    <table>
+                        <tr class="head">
+                            <th>Photo</th>
+                            <th>Name</th>
+                            <th>Rate</th>
+                            <th>Number Of Reports</th>
+                            <th> controls</th>
+                        </tr>
+                        <?php 
+                            include "class/database.class.php";
+                            $test = new dataBase("localhost","mazad", "root", "1234A");
+                            $test->setTable('user');
+                            $allData = $test->select();
+                            for($i = 0; $i<sizeof($allData);$i++){
+                                echo '<tr>
+                                <th>
+                                    <div class="cir">
+                                        <img src="imgs/original.jpg" alt="">
+                                    </div>
+                                </th>
+                                <th>';
+                                    echo $allData[$i]['firstName'];
+                                echo '</th>
+                                <th>
+                                    190
+                                </th>
+                                <th>
+                                    3
+                                </th>
+                                <th>
+                                    <button>Deactivte</button>
+                                    <button class="danger">Delete</button>
+                                </th>
+                            </tr>';
+                            }
+                        ?>
+                        
+                    </table>
+                </div><!-- end of div tbl-->
+            </div><!-- end of div manage-user-->
+
+            <div class="manage-cats">
+                <h3>Manage Categories</h3>
+                <table>
+                    <tr class="head">
+                        <th>Icon</th>
+                        <th>Name</th>
+                        <th>Number Of Session</th>
+                        <th>Details</th>
+                        <th> controls</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="cir">
+                                <i class="fas fa-car"></i>
+                            </div>
+                        </th>
+                        <th>
+                            cars
+                        </th>
+                        <th>
+                            24
+                        </th>
+                        <th>
+                            buying old cars
+                        </th>
+                        <th>
+                            <button>Edit</button>
+                            <button class="danger">Delete</button>
+                        </th>
+                    </tr>
+                </table>
+                <button class="add">Add New</button>
+            </div><!-- end of div manage-cats-->
+
+            <div class="manage-cats">
+                    <h3>Manage Categories</h3>
+                    <table>
+                        <tr class="head">
+                            <th>Icon</th>
+                            <th>Name</th>
+                            <th>Number Of Session</th>
+                            <th>Details</th>
+                            <th>controls</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="cir">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                            </th>
+                            <th>
+                                cars
+                            </th>
+                            <th>
+                                24
+                            </th>
+                            <th>
+                                selling old cars
+                            </th>
+                            <th>
+                                <button>Edit</button>
+                                <button class="danger">Delete</button>
+                            </th>
+                        </tr>
+                        <tr>
+                                <th>
+                                    <div class="cir">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                </th>
+                                <th>
+                                    cars
+                                </th>
+                                <th>
+                                    24
+                                </th>
+                                <th>
+                                    selling old cars
+                                </th>
+                                <th>
+                                    <button>Edit</button>
+                                    <button class="danger">Delete</button>
+                                </th>
+                            </tr>
+                    </table>
+                    <button class="add">Add New</button>
+                </div><!-- end of div manage-cats-->
+
+                <div class="manage-session">
+                    <h3>Manage Session</h3>
+                    <table>
+                        <tr class="head">
+                            <th>Id</th>
+                            <th>Auto Sell</th>
+                            <th>Blind</th>
+                            <th>startTime</th>
+                            <th>endTime</th>
+                            <th>Item</th>
+                            <th>Controls</th>
+                        </tr>
+                        <tr>
+                            <th>
+                                12
+                            </th>
+                            <th>
+                                400K<sup>EGP</sup>
+                            </th>
+                            <th>
+                                <i class="fas fa-circle off"></i>
+                            </th>
+                            <th>
+                                11.2.2018 9:23 PM
+                            </th>
+                            <th>
+                                12.2.2018 10:03 PM
+                            </th>
+                            <th>
+                                BMW E36
+                            </th>
+                            <th>
+                                <button>Block</button>
+                                <button class="danger">Delete</button>
+                            </th>
+                        </tr>
+                    </table>
+                    <!-- id  autoSell 	isBlind 	startTime 	endTime 	itemId  -->
+                </div>
+        </div><!-- end of section container-fluid-->
+
+    </section><!-- end of section admin-panel-->
+
+</section><!-- end of section conent-->    
+
+
+        <div class="form col-lg-4 col-md-6 col-sm-8" id='test'>
+          <div class="myCon">
+               <h2 class="title"><i class="fa fa-bullseye"></i>Add Categories</h2>
+                <form action="" class="signUp" method="post" autocomplete="off">
+                    <div class="row">
+                        <div class="firstName col-12">
+                            <label for="firstName" class="col-12">Name</label>
+                            <div class="border">
+                                <input type="text" name="firstName" class="col-12" placeholder='more than 3 chars'/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="userName col-12">
+                            <label for="userName" class="col-12">icon</label>
+                            <div class="border">
+                                <input type="text" class="col-12" name="userName"  placeholder='eg. mr.robot'/>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                            <div class="email col-12">
+                                <label for="email" class="col-12">Details</label>
+                                <div class="border">
+                                    <textarea type="text" name="email" class="col-12" ></textarea>
+                                </div>
+                            </div>    
+                        </div>
+                </form>
+            </div>
+            <div class="sup">
+                <input type="submit" value = "Add Categories"/>
+            </div>
+            <p>
+                * By signing up, you agree to receive Stox emails, newsletters & updates.
+            </p>
+        </div>
+
+
+
+
+
+
+<!--
+<div class="login col-lg-4 col-md-6 col-sm-8">
+        <span class="dir-signUp">
+            New to Mazad? <a href="signUp.html">Sign up</a>
+        </span>
+        <div class="form">
+            <div class="myCon">
+                <h2 class="signIn"><i class="fa fa-bullseye"></i> Sign in</h2>
+                <form action="" method="post">
+
+                    <div class="row">
+                        <div class="email col-12">
+                            <label for="email" class="col-12">Email address</label>
+                            <div class="border">
+                                <input type="email" name="email" class="col-12" placeholder='Your@mail.com' />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="password col-12">
+                            <label for="password" class="col-12">Password</label>
+                            <div class="border add-icon">
+                                <input type="password" class="col-12" name="password" data-show="true" placeholder="Enter strong password" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sup">
+                        <input type="submit" value = "Sign in"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div class="form col-lg-4 col-md-6 col-sm-8" id='test'>
+          <div class="myCon">
+               <h2 class="title"><i class="fa fa-bullseye"></i>Sign up</h2>
+                <form action="" class="signUp" method="post" autocomplete="off">
+                    <div class="row">
+                        <div class="firstName col-6">
+                            <label for="firstName" class="col-12">First Name</label>
+                            <div class="border">
+                                <input type="text" name="firstName" class="col-12" placeholder='more than 3 chars'/>
+                            </div>
+                        </div>
+                        <div class="lastName col-6">
+                            <label for="lastName" class="col-12">Last Name</label>
+                            <div class="border">
+                                <input type="text" name="lastName" class="col-12"  placeholder='more than 3 chars'/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="email col-12">
+                            <label for="email" class="col-12">Email address</label>
+                            <div class="border">
+                                <input type="email" name="email" class="col-12"  placeholder='Your@mail.com'/>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="userName col-12">
+                            <label for="userName" class="col-12">Username</label>
+                            <div class="border">
+                                <input type="text" class="col-12" name="userName"  placeholder='eg. mr.robot'/>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="phone col-12">
+                            <label for="phoneNumber" class="col-12">Phone</label>
+                            <div class="border">
+                                <input type="tel" class="col-12" name="phoneNumber" placeholder='0-111-1111-111'/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="password col-12">
+                            <label for="password"  class="col-12">Password</label>
+                            <div class="border add-icon">
+                                <input type="password" class="col-12" name="password" data-show="true" placeholder="Enter strong password"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="rePassword col-12">
+                            <label for="comPassword" class="col-12">Password Confirmation</label>
+                            <div class="border add-icon">
+                                <input type="password" class="col-12" name="comPassword" data-show="true" placeholder="Rewrite password"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                           <div class="row">
+                               <div class="col-4"><p class='gen'>Gender</p></div>
+                                <div class="col-4">
+                                    <input id="gen1" type="radio" class="col-1" name="gender" value="male" checked/>
+                                    <label for="gen1" class="col-11">Male</label>
+                                </div>
+                                <div class="col-4">
+                                    <input id="gen2" type="radio" class="col-1" name="gender" value="female"/>
+                                    <label for="gen2" class="col-11">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sup">
+                        <input type="submit" value = "Sign Up"/>
+                    </div>
+                </form>
+            </div>
+            <p>
+                * By signing up, you agree to receive Stox emails, newsletters & updates.
+            </p>
+        </div>
+        <svg size="220" width="220" height="220" class="css-acnwwq"><path fill="none" stroke="#ced7e0" stroke-width="36" d="M 119.99994722124349 36.000000000016584 A 84 84 0 1 0 120 36"></path><path fill="none" stroke="#ffcb66" stroke-width="26" d="M 119.99994722124349 36.000000000016584 A 84 84 0 1 0 120 36"></path><path fill="none" stroke="#7020fc" stroke-width="26" d="M 119.99994722124349 36.000000000016584 A 84 84 0 1 0 120 36"></path></svg>
+        -->
+        
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

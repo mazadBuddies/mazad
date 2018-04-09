@@ -1,0 +1,49 @@
+
+/*start of aside style*/
+aside.left-side{
+    background-color: $sec-color;
+    //height: 87px;
+    color: $font-color;
+    z-index: 1000;
+    position: fixed;
+    bottom:0px;
+    font-size:$font-md;
+    width: 60px;
+    box-shadow: 2px 2px 2px $shadow-color;
+    overflow-x: hidden;
+    @include smooth();
+    &:hover{
+        width: 250px;
+        @include smooth2(0.3s);
+    }
+    ul{
+        margin-top: 40px;
+    }
+    li,div.chng{
+        margin:8px 0px;
+        width: 600px;
+        padding: 4px 0px 10px 18px;
+        color: $font-color;
+        font-size:$font-md+4px;
+        font-weight:500;
+        cursor: pointer;
+        border-left: 4px solid transparent;
+        @include smooth();
+        a{
+            color: $font-color;
+            
+        }
+        &:hover, &:hover a{
+            color:#000;
+            @include smooth();
+        }
+        >i,div.chng{
+            padding-right: 20px;
+        }
+    }
+    li.active{
+        border-left: 4px solid $main-color;
+        color:$main-color;
+    }
+}
+/*end of aside style*/

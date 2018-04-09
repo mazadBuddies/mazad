@@ -1,0 +1,11 @@
+.loader-overlay{
+    position: fixed;
+    content : "";
+    width: 100vw;
+    height: 100vh;
+    top:0px;
+    left:0px;
+    background-color: #ddd;
+    z-index: 99999999;
+    padding-top: 30vh;
+}

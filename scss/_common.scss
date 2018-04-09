@@ -1,0 +1,185 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2018, 9:00:21 PM
+    Author     : boodey
+*/
+// sass --watch /opt/lampp/htdocs/goCS/layOut/scss:/opt/lampp/htdocs/goCS/layOut/css --style compressed
+// sass --watch /opt/lampp/htdocs/goCS/layOut/scss:/opt/lampp/htdocs/goCS/layOut/css --style compact
+// sass --watch /opt/lampp/htdocs/goCS/layOut/scss:/opt/lampp/htdocs/goCS/layOut/css --style expand
+// sass --watch /var/www/html/mazad/scss:/var/www/html/mazad/css/styles
+
+//start of importing other sass files
+@import "_vendor";
+@import "_mixins";
+@import "_globals";
+@import "_vars";
+@import "_fonts";
+
+@import "_comp/_form-signUp.scss";
+@import "_comp/_form-signIn.scss";
+@import "_comp/_side.scss";
+@import "_comp/_nav.scss";
+@import "_comp/_profile.scss";
+@import "_comp/_dashboard.scss";
+@import "_comp/_feedbacks.scss";
+@import "_comp/_admin.scss";
+@import "_comp/_popUp.scss";
+@import "_comp/_session.scss";
+@import "_libs/_overlayLoader.scss";
+*{
+    margin: 0px;
+    padding: 0px;
+    @include box-sizing(border-box);
+}
+
+
+div.noti-suc{
+    position: fixed;
+    right: -100%;
+    top: 22vh;
+    padding: 10px;
+    background-color: $main-color;
+    color:$font-color2;
+    z-index: 99999;
+}
+
+li{list-style: none;}
+a{text-decoration: none;}
+input{outline: medium none currentcolor;}
+body{
+    background-color:$def;
+    width:104%;
+    overflow-x: hidden;}
+.blur{color:#ddd;}
+i.fa{ font-size: 26px;  }
+section.content{
+    margin-top: 100px!important;
+}
+div.drob-down{
+    div.contain{
+        position: relative;
+    }
+    span.title{
+        font-weight: bolder;
+        background-color: $def;
+        color:$font-color;
+        border:1px solid $main-color;
+        padding: 10px 30px;
+        display: block;
+        cursor: pointer;
+        @include smooth();
+        &:hover{
+            background-color: $main-color;
+            @include smooth();
+            color:#fff;
+            border-color:transparent;
+            @include box-shadow(0px 0px 10px $main-color);
+        }
+        &:active
+        {
+            color:#f0f;
+            @include smooth();
+        }
+        
+    }
+    ul{
+        @include box-shadow(0px 0px 1px $main-color);
+        position: absolute;
+        z-index: 999;
+        left: 0px;
+        top:45px;
+        width: 138px;
+    }
+    ul li{
+        background-color: $def;
+        padding: 10px 30px;
+        cursor: pointer;
+        
+        @include smooth();
+        &:hover{
+            background-color: $main-color;
+            color:$def;
+            @include smooth();
+        }
+    }
+}
+
+
+.hidden{
+    opacity: 0;
+}
+
+
+input.autoSellValue{
+    border: 5px double $red!important;
+    width: 100%!important;
+    margin-top: -10px;
+}
+
+div.bt{
+    margin: 10px 0;
+    
+}
+
+
+
+div.switch{
+    @include switch(150px, 30px, $main-color, $red, $def);
+}
+
+.rotate-180{
+    @include smooth();
+    transform: rotate(180deg);
+    color:$main-color;
+    transform-origin: center;
+}
+
+span.qur,
+div.qur{
+    padding: 10px;
+    background-color: $main-color;
+    color: #fff;
+    float: left;
+    display: block;
+    @include box-shadow(0px 0px 10px #000);
+    margin: 10px 10px 10px 0px;
+    margin-right: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+select {
+    width:70%;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-color: #F07575; /* fallback color if gradients are not supported */
+    background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+    background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
+    background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
+    background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
+    background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
