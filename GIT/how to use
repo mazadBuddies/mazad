@@ -1,0 +1,9 @@
+/*
+***********************************
+* How To Use GIT and its Commands *
+***********************************
+*/
+
+git config --global user.name "yourName"
+git clone git_repository.git
+git init

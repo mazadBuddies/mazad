@@ -1,0 +1,26 @@
+@import "_commonColors.scss";
+$font-color : #000;
+$font-color2: #fff;
+//start colors of theme 2
+$main-color: /*#9561E2*/#ff2323;
+$sec-color :  #282828;
+$def:rgba(11,11,11,0.9);
+$font-color : #fff;
+$font-color-w : #fff;
+$table-font-color:rgb(178, 169, 193);
+$link-color:#ff2323;
+$icon-color: #ddd;
+/*start of heading color*/
+$heading-color: #fff;
+/*end of heading color*/
+/*start of global colors*/
+$green:#32CD32;
+$red:#ff2323;
+$shadow-color: transparent;//theme1
+$sec-shadow-color: transparent;
+/*end of global colors*/
+$overlay-color: rgba(255,255,255,0.6);
+
+.head{
+    color:$heading-color!important;
+}

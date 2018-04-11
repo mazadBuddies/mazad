@@ -1,0 +1,148 @@
+/*start of nav style*/
+    nav.nav-bar{
+        @include box-shadow(2px 2px 2px $shadow-color);
+        width: 100vw;
+        font-family: $sec-font;
+        background-color: $sec-color;
+        padding-top: 8px;
+        position: fixed;
+        top:0px;
+        left: 0px;
+        z-index: 999;
+        color: $font-color;
+        i.fa.ll{@include icon-hover(1);
+            position: absolute;
+            top:18px;
+            right:-30px;
+        }
+
+            div.name{
+                font-size: $font-lg;
+                padding : 0px 15px 0px 10px ;
+                text-transform: capitalize;
+                text-align: center;
+                width: 100%;
+            }
+        span.name{
+            font-size: $font-xlg;
+            text-transform: capitalize;
+            font-family: $first-font;
+            font-weight: bolder;
+            
+            span.fir{
+                color:$main-color;
+            }
+            span.sec{
+                color:$font-color;
+                //margin-left: -15px;
+            }   
+        }
+        a{
+            color:$main-color;
+            font-size:$font-lg + 10px;
+        }
+        span.bold{
+            @include bold();
+            font-size:$font-md;
+            padding-right: 20px;
+        }
+        span.balance{
+            color:$font-color;
+            padding-top: 30px;
+            text-align: center;
+            span:first-of-type{
+                font-size:$font-lg - 2px;
+            }
+            span:nth-of-type(2){
+                padding-right: 40px;
+            }
+            i.sz{
+                font-size: $font-md;
+                color:#ddd;
+                margin-top: 10px;
+                float: right;
+                @include icon-hover(1);
+            }
+            
+        }
+        div.availble-bounce{
+            border-right: 2px solid #ddd;
+            padding-top: 10px;
+        }
+        div.newSession{
+            font-size:$font-lg +12px;
+            margin: 0px 15px;
+            @include smooth();
+            i.fa-coffee{
+                cursor: pointer;
+                &:hover{
+                    color:$main-color;
+                    @include smooth();
+                }
+            }
+        }
+        div.info{
+            
+            padding-top: 10px;
+            position: relative;
+            div.drop-down{
+                @include smooth();
+                opacity: 0;
+                position: absolute;
+                left: -130px;
+                top:70px;
+                background-color: $def;
+                font-weight: bold;
+                box-shadow: 0px 0px 10px $shadow-color;
+                ul{
+                    position: relative;
+                    width: 220px;
+                    li{
+                        padding: 10px 12px;
+                        cursor: pointer;
+                        @include smooth();
+                        &:hover{
+                            background-color: #f5f5f5;
+                            @include smooth();
+                            padding-left: 15px;
+                            color:$main-color;
+                            text-shadow: 0px 0px 10px $main-color;
+                        }
+                    }
+                    &:after{
+                        position: absolute;
+                        content:"";
+                        border:4px solid $main-color;
+                        border-width: 10px;
+                        top:-20px;
+                        right: 44px;
+                        border-color: transparent transparent $def transparent;
+                        
+                    }
+                    i{
+                        padding-right: 10px;
+                    }
+                }
+            }
+            div.cir{
+                overflow: hidden;
+                position: relative;
+                
+                @include cir(40px);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    left:0px;
+                    position: absolute;
+                }
+            }
+        }
+        i.sep{
+            color:#ddd;
+            font-size: $font-lg + 10px;
+            padding-top:10px;
+        }
+        a.logOut{
+            font-size: $font-md;
+        }
+    }

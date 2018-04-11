@@ -1,0 +1,31 @@
+@mixin vendor($prob, $value){
+    #{$prob} : $value;
+    -webkit-#{$prob} : $value;
+    -moz-#{$prob} : $value;
+    -ms-#{$prob} : $value;
+    -o-#{$prob} : $value;
+}
+
+@mixin background-color($value){
+    @include vendor("background-color", $value);
+}
+
+@mixin background-attachment($value){
+    @include vendor("background-attachment", $value);
+}
+
+@mixin box-sizing($val){
+    @include vendor(box-sizing,$val);
+}
+
+@mixin box-shadow($val){
+    @include vendor("box-shadow",$val);
+}
+
+@mixin circIcon($width, $padding1, $padding2, $fSize){
+    width: $width;
+    height: $width;
+    padding: $padding1 $padding2;
+    font-size: $fSize;
+    border-radius: 50%;
+}

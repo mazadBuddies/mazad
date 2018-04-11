@@ -1,0 +1,322 @@
+/* start of profile style */
+    section.profile{
+        display: none;
+        opacity: 0;
+        margin:  auto;
+        position: relative;
+        color: $font-color;
+        h2.head{
+            padding: 20px 0 40px 0;
+        }
+        div.menu-header{
+            div.ponn{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                right: 15px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: green;
+                z-index: 99;
+            }
+            div.menu{
+                display: none;
+                background-color: $sec-color;
+                position: absolute;
+                bottom:-120%;
+                right: -100%;
+                z-index: 999;
+                @include box-shadow(0px 0px 10px $shadow-color);
+                ul{
+                    width: 120px;  
+                }
+                
+                li{
+                    padding: 7px 10px;
+                    cursor: pointer;
+                    @include smooth();
+                    &:hover
+                    {
+                        @include smooth();
+                        background-color: #ddd;
+                        padding-left: 13px;
+                    }
+                }
+                .active{
+                    box-shadow:0px 0px 10px $shadow-color;
+                    padding-left: 13px;
+                }
+                li:first-of-type > i{
+                    color:green;
+                }
+                li:nth-of-type(2) > i{
+                    color:black;
+                }
+                li:last-of-type > i{
+                    color:red;
+                }
+            }
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            top:-15%;
+            left: 42%;
+        }
+        div.myInfo{
+            background-color: $def;
+            @include box-style(1);
+            button{
+                @include btn-style(1);
+                float:right;
+            }
+            button.follow{
+                background-color: $sec-color;
+                border : 1px solid $main-color;
+                color: $green;
+
+            }
+            div.img{
+                @include cir(100px);
+                position: absolute;
+                overflow: hidden;
+                
+                >img{
+                    width: 100px;
+                    height:100px;
+                    border-radius: 50%;
+                }
+            }
+            span.name{
+                text-align: center;
+                display: block;
+                font-size: $font-xlg;
+                text-transform: capitalize;
+            }
+        }
+        div.row2{
+            
+            div.wallet{
+                @include box-style(1);
+                margin-right: (1/12) * 100%;
+                button{
+                    @include btn-style(1);
+                    @include cen();
+                }
+                p{
+                    @include par(1);
+                    padding-top: 30px;
+                    font-size: $font-lg;
+                    color: $main-color;
+                }
+                div.cir{
+                    @include cir(100px);
+                    @include cen();
+                    font-size: $font-xlg + 30px;
+                    padding-left:16px;
+                    margin-bottom: 30px;
+                    color: $main-color;
+                    @include smooth();
+                    &:hover{
+                        color: $main-color;
+                        @include smooth();
+                    }
+                }
+            }
+            div.power{
+                @include box-style(1);
+                div.content{
+                    margin: 60px 0px 70px 0px;
+                    div.left{
+                        @include par(1);
+                        font-size: $font-md +3px;
+                        padding-top: 20px;
+                    }
+                    div.right{
+                        div.cir{
+                            @include cir(130px);
+                            padding: 25px 0px 0px 20px;
+                            color:$main-color;
+                        }
+                    }
+                }
+                a{
+                    color:$main-color!important;
+                    float: right;
+                }
+            }    
+        }//end of row2
+        div.activity{
+            @include box-style(1);
+            div.controls{
+                position: relative;
+                float: right;
+                >span{
+                    cursor: pointer;
+                    padding-right: 10px;
+                    //color:#ddd;
+                }
+                span.active{
+                    color:$main-color;
+                }
+                div.after{
+                    content: " ";
+                    width: 50%;//50 35
+                    height: 3px;
+                    background-color: $main-color;
+                    position: absolute;
+                    top: 25px;
+                    right: 50%;//50 6
+                    transition: all 0.5s cubic-bezier(0.09,0.67,0.58,1);
+                }
+            }
+        }
+        div.slide{
+            width: 100%;
+            display: block;
+            margin: 50px auto;
+            overflow-x: hidden;
+            div.inner{
+                transition: all 0.5s cubic-bezier(0.09,0.67,0.58,1);
+                width:200%;
+                position: relative;
+                div.session,
+                div.myWallet{
+                    width: 50%;
+                    float: left!important;
+                    @include tbl();
+                    table{
+                        width: 100%;
+                        th{
+                            font-family: $sec-font;
+                            span{
+                                color:rgb(0, 210, 114);
+                                sup{
+                                    font-weight: bolder;
+                                }//end of sup
+                            }//end of span
+                            i{
+                                color:$main-color;
+                            }// end of i
+                        }//end of th
+                    }//end of tabel
+                }// end of div wallet
+            }//div.inner
+        }//div.slide
+        div.following{
+            @include box-style(1);
+            text-align: center;
+            span.outter{
+                padding: 20px 0px;
+                display: block;
+                font-weight: bolder;
+                opacity: 0;
+
+            }
+            div.cir{
+                @include cir(160px);
+                padding-top: 10px;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+                font-family: $sec-font;
+                div.after,div.before{
+                    position: absolute;
+                    overflow: hidden;
+                    font-size:$font-xlg;
+                    height: 50%;
+                    width: 100%;
+                    color:#fff;
+                    @include smooth();
+                }   
+                div.after{
+                    padding-top: 31%;;//42
+                    background-color: $main-color;
+                    top:0px;
+                    left:0px;
+                }
+                div.before{
+                    background-color: #000;
+                    bottom:0px;
+                    left:0px;
+                    span{
+                        margin-top: -20%;
+                        display: block;
+                    }
+                }
+                span.number{
+                    font-size: $font-xlg + 40px;
+                    display: block;
+                    padding-top: 10px;
+                    cursor: pointer;
+                    @include smooth();
+                    &:hover{
+                        color: $main-color;
+                        @include smooth();
+                    }
+                }
+            }
+
+            div.followSec{
+                position: fixed;
+                width: 90vw;
+                display: none;
+                z-index: 9999;
+                top: 30vh;
+                background-color: $sec-color;;
+                padding: 30px;
+                //@include box-shadow(0px 0px 30px $shadow-color);
+                border: 4px double $main-color;
+                i.closeP{
+                    color: #231;
+                    position: absolute;
+                    top:10px;
+                    left: 10px;
+                    font-size: $font-xlg;
+                    @include smooth();
+                    cursor: pointer;
+                    &:hover{
+                        color: $main-color;
+                        @include smooth();
+                    }
+                    i{
+                        width:100%;
+                        height: 100;
+                    }
+                }
+                div.panel{
+                    margin-bottom: 30px;
+                }
+                div.cir{
+                    @include cir(100px);
+                    padding-top: 0px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                div.userInfo{
+                    font-family: arail;
+                    color: $main-color;
+                    font-size: $font-md;
+                }
+                div.controls{
+                    position: absolute;
+                    background-color: #000;
+                    top:35%;
+                    left :32%;
+                    transform: scale(1) rotateX(90deg);
+                    transform-style: preserve-3d;
+                    transform-origin: bottom;
+                    transition-duration: 1s;
+                    @include smooth();
+                    button{
+                        @include btn-style(2);
+                        padding: 4px!important;
+                        box-shadow: 0px 0px 0px !important;
+                    }
+                }
+            }
+        }//end of following
+    }//end of section profile
